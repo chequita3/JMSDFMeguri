@@ -1,0 +1,6 @@
+framework module Pods_JMSDFMeguri {
+  umbrella header "Pods-JMSDFMeguri-umbrella.h"
+
+  export *
+  module * { export * }
+}

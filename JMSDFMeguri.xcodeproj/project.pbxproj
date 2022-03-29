@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3098989C0CB5D4B72C1FF664 /* Pods_JMSDFMeguri.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC620ABF9659EAFA70436E7A /* Pods_JMSDFMeguri.framework */; };
 		987BDDB927F12277004015ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987BDDB827F12277004015ED /* AppDelegate.swift */; };
 		987BDDBB27F12277004015ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987BDDBA27F12277004015ED /* SceneDelegate.swift */; };
 		987BDDBD27F12277004015ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987BDDBC27F12277004015ED /* ViewController.swift */; };
 		987BDDC027F12277004015ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 987BDDBE27F12277004015ED /* Main.storyboard */; };
 		987BDDC227F12279004015ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 987BDDC127F12279004015ED /* Assets.xcassets */; };
 		987BDDC527F12279004015ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 987BDDC327F12279004015ED /* LaunchScreen.storyboard */; };
+		987BDDCD27F123E1004015ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 987BDDCC27F123E1004015ED /* GoogleService-Info.plist */; };
+		987BDDD027F1271A004015ED /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 987BDDCF27F1271A004015ED /* FirebaseAuth */; };
+		987BDDD227F1271A004015ED /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 987BDDD127F1271A004015ED /* FirebaseFirestore */; };
+		987BDDD427F1271A004015ED /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 987BDDD327F1271A004015ED /* FirebaseStorage */; };
+		987BDDD727F127CE004015ED /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 987BDDD627F127CE004015ED /* FirebaseAnalytics */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		326BB66F4F7E591809651300 /* Pods-JMSDFMeguri.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMSDFMeguri.debug.xcconfig"; path = "Target Support Files/Pods-JMSDFMeguri/Pods-JMSDFMeguri.debug.xcconfig"; sourceTree = "<group>"; };
 		987BDDB527F12277004015ED /* JMSDFMeguri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMSDFMeguri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		987BDDB827F12277004015ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		987BDDBA27F12277004015ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		987BDDC127F12279004015ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		987BDDC427F12279004015ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		987BDDC627F12279004015ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		987BDDCC27F123E1004015ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B39DA22E4E88B4C0E46762AB /* Pods-JMSDFMeguri.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMSDFMeguri.release.xcconfig"; path = "Target Support Files/Pods-JMSDFMeguri/Pods-JMSDFMeguri.release.xcconfig"; sourceTree = "<group>"; };
+		FC620ABF9659EAFA70436E7A /* Pods_JMSDFMeguri.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMSDFMeguri.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				987BDDD027F1271A004015ED /* FirebaseAuth in Frameworks */,
+				987BDDD227F1271A004015ED /* FirebaseFirestore in Frameworks */,
+				987BDDD727F127CE004015ED /* FirebaseAnalytics in Frameworks */,
+				987BDDD427F1271A004015ED /* FirebaseStorage in Frameworks */,
+				3098989C0CB5D4B72C1FF664 /* Pods_JMSDFMeguri.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03E51E23833DC5D6A7F93662 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				326BB66F4F7E591809651300 /* Pods-JMSDFMeguri.debug.xcconfig */,
+				B39DA22E4E88B4C0E46762AB /* Pods-JMSDFMeguri.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		79117C688664E233626F5DA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC620ABF9659EAFA70436E7A /* Pods_JMSDFMeguri.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		987BDDAC27F12277004015ED = {
 			isa = PBXGroup;
 			children = (
 				987BDDB727F12277004015ED /* JMSDFMeguri */,
 				987BDDB627F12277004015ED /* Products */,
+				03E51E23833DC5D6A7F93662 /* Pods */,
+				79117C688664E233626F5DA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +98,7 @@
 				987BDDC127F12279004015ED /* Assets.xcassets */,
 				987BDDC327F12279004015ED /* LaunchScreen.storyboard */,
 				987BDDC627F12279004015ED /* Info.plist */,
+				987BDDCC27F123E1004015ED /* GoogleService-Info.plist */,
 			);
 			path = JMSDFMeguri;
 			sourceTree = "<group>";
@@ -74,15 +110,23 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 987BDDC927F12279004015ED /* Build configuration list for PBXNativeTarget "JMSDFMeguri" */;
 			buildPhases = (
+				A70702CCCC1D614BA8C33EE7 /* [CP] Check Pods Manifest.lock */,
 				987BDDB127F12277004015ED /* Sources */,
 				987BDDB227F12277004015ED /* Frameworks */,
 				987BDDB327F12277004015ED /* Resources */,
+				0FC6763524D0D3B10E6496B6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = JMSDFMeguri;
+			packageProductDependencies = (
+				987BDDCF27F1271A004015ED /* FirebaseAuth */,
+				987BDDD127F1271A004015ED /* FirebaseFirestore */,
+				987BDDD327F1271A004015ED /* FirebaseStorage */,
+				987BDDD627F127CE004015ED /* FirebaseAnalytics */,
+			);
 			productName = JMSDFMeguri;
 			productReference = 987BDDB527F12277004015ED /* JMSDFMeguri.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +155,10 @@
 				Base,
 			);
 			mainGroup = 987BDDAC27F12277004015ED;
+			packageReferences = (
+				987BDDCE27F1271A004015ED /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				987BDDD527F127CE004015ED /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 987BDDB627F12277004015ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,12 +174,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				987BDDC527F12279004015ED /* LaunchScreen.storyboard in Resources */,
+				987BDDCD27F123E1004015ED /* GoogleService-Info.plist in Resources */,
 				987BDDC227F12279004015ED /* Assets.xcassets in Resources */,
 				987BDDC027F12277004015ED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FC6763524D0D3B10E6496B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JMSDFMeguri/Pods-JMSDFMeguri-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JMSDFMeguri/Pods-JMSDFMeguri-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JMSDFMeguri/Pods-JMSDFMeguri-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A70702CCCC1D614BA8C33EE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JMSDFMeguri-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		987BDDB127F12277004015ED /* Sources */ = {
@@ -282,6 +373,7 @@
 		};
 		987BDDCA27F12279004015ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 326BB66F4F7E591809651300 /* Pods-JMSDFMeguri.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +401,7 @@
 		};
 		987BDDCB27F12279004015ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B39DA22E4E88B4C0E46762AB /* Pods-JMSDFMeguri.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -356,6 +449,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		987BDDCE27F1271A004015ED /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		987BDDD527F127CE004015ED /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		987BDDCF27F1271A004015ED /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 987BDDCE27F1271A004015ED /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		987BDDD127F1271A004015ED /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 987BDDCE27F1271A004015ED /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		987BDDD327F1271A004015ED /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 987BDDCE27F1271A004015ED /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		987BDDD627F127CE004015ED /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 987BDDD527F127CE004015ED /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 987BDDAD27F12277004015ED /* Project object */;
 }
