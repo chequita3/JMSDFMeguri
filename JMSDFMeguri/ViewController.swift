@@ -12,7 +12,7 @@ import SDWebImage
 class ViewController: UIViewController {
     
     
-    @IBOutlet weak var image: UIImageView!
+
     
 
     override func viewDidLoad() {
@@ -23,19 +23,7 @@ class ViewController: UIViewController {
     }
 
     
-    @IBAction func getImage(_ sender: Any) {
-        
-        let gsRef = Storage.storage().reference(withPath: "護衛艦/ひゅうが1.jpeg")
-        
-        gsRef.downloadURL { url, error in
-            if error != nil {
-                print("error")
-            } else {
-                self.image.sd_setImage(with: url, completed: nil)
-            }
-        }
-        print("ボタン押した")
-    }
+
     
 }
 
