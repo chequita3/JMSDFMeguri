@@ -22,7 +22,7 @@ struct DataSet {
     let width:String
     let displacement:String
     let capacity:String
-    let topSped:String
+    let topSpeed:String
     let equipments1:String
     let equipments2:String
     let equipments3:String
