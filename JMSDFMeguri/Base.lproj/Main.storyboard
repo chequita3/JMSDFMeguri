@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JMSDFMeguri" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="FirstViewController" customModule="JMSDFMeguri" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,6 +30,9 @@
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="種類から探してみる"/>
+                                <connections>
+                                    <action selector="toSelectTypeVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g8r-Bp-58D"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxI-oS-uLJ">
                                 <rect key="frame" x="36" y="496" width="342" height="158"/>
@@ -37,6 +40,9 @@
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="母港から探してみる"/>
+                                <connections>
+                                    <action selector="toSelectHPVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sPG-gt-j8R"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nl-2k-xzH">
                                 <rect key="frame" x="36" y="300" width="342" height="158"/>
@@ -44,32 +50,30 @@
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="番号、名前から探してみる"/>
+                                <connections>
+                                    <action selector="toSearchVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bt6-dv-b88"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ig5-sF-JVg"/>
-                    <connections>
-                        <segue destination="rZ8-5m-4m8" kind="show" id="nGl-P6-a6q"/>
-                        <segue destination="CxX-aV-QQZ" kind="show" id="1Di-Vb-umO"/>
-                        <segue destination="NTj-uF-Ln8" kind="show" id="KQK-y6-41N"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2820.289855072464" y="64.955357142857139"/>
+            <point key="canvasLocation" x="2752" y="57"/>
         </scene>
         <!--母港を選んでみましょう！-->
         <scene sceneID="pJ5-pD-dP2">
             <objects>
-                <viewController id="CxX-aV-QQZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectHPVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CxX-aV-QQZ" customClass="SelectHPViewController" customModule="JMSDFMeguri" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gQ2-G3-oQL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEM-ar-90m">
-                                <rect key="frame" x="0.0" y="88" width="414" height="1112"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1156"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEW-GA-CUV">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
@@ -151,7 +155,7 @@
             <objects>
                 <collectionViewController id="ixm-cL-zOu" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="R5g-5t-dVh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Rnk-DJ-Tuy">
@@ -362,7 +366,7 @@
         <!--番号、名前から探してみましょう！-->
         <scene sceneID="usg-1l-AIc">
             <objects>
-                <tableViewController id="rZ8-5m-4m8" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="searchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rZ8-5m-4m8" customClass="SearchViewController" customModule="JMSDFMeguri" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="eAA-HB-1Mo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -373,7 +377,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="taB-4r-bk2">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="taB-4r-bk2">
                                 <rect key="frame" x="0.0" y="88.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="taB-4r-bk2" id="XCN-4G-9Yv">
@@ -396,13 +400,13 @@
         <!--種類から探してみましょう！-->
         <scene sceneID="Qkg-tE-A9g">
             <objects>
-                <viewController id="NTj-uF-Ln8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectTypeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NTj-uF-Ln8" customClass="SelectTypeViewController" customModule="JMSDFMeguri" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xkG-Lo-piO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBN-L1-AWc">
-                                <rect key="frame" x="0.0" y="88" width="414" height="1112"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1156"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jv3-qh-oiu">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
@@ -489,7 +493,7 @@
             <objects>
                 <collectionViewController id="5zK-XO-P4b" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Anq-S2-d9B">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IIh-0c-rnD">
