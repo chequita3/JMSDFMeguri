@@ -6,52 +6,69 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class SearchViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, loadOKDelegate {
+struct Ship {
+    let name: String
+}
 
+class SearchViewController: UIViewController,loadOKDelegate {
     
-
-    var loadDBModel = LoadDBModel()
+    
+    
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    
+    var loadDBModel = LoadDBModel()
+    var shipNameArray: [String] = []
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.delegate = self
-                tableView.dataSource = self
-                loadDBModel.loadOKDelegate = self
-
+        loadDBModel.loadOKDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         loadDBModel.loadContents()
+
     }
     
     func loadOK(check: Int) {
         if check == 1 {
-            tableView.reloadData()
+            
+            
+            self.shipNameArray = []
+            let DBArray = loadDBModel.dataSets
+            for allShips in DBArray {
+                let hoge: [String] = [allShips.shipName]
+                
+                
+                for value in hoge {
+                    
+                    self.shipNameArray.append("\(value)")
+                    
+                    tableView.reloadData()
+                    print("\(shipNameArray)")
+                }
+           }
         }
     }
     
+
+
+
     
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return loadDBModel.dataSets.count
-    }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
-        cell.textLabel!.text = loadDBModel.dataSets[indexPath.row].shipName
-        
-        return cell
-    }
+ 
+
 
     /*
     // MARK: - Navigation
@@ -64,3 +81,22 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
     */
 
 }
+
+
+extension SearchViewController: UITableViewDelegate,UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return shipNameArray.count
+        //loadDBModel.dataSets.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        cell.textLabel!.text = shipNameArray[indexPath.row]
+//        loadDBModel.dataSets[indexPath.row].shipName
+        
+        return cell
+    }
+}
+

@@ -93,8 +93,6 @@ class LoadDBModel {
                         self.dataSets.append(newDataSet)
                         self.loadOKDelegate?.loadOK(check: 1)
                         print("データを受信完了")
-                    }else{
-                        print("データが存在しないドキュメントあり")
                     }
                 }
             }
