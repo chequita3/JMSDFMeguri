@@ -6,23 +6,24 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
 
-struct Ship {
-    let name: String
+struct Ships {
+    var name: String
+    var number: Int
+    
 }
+
 
 class SearchViewController: UIViewController,loadOKDelegate {
     
     
     
     
-    @IBOutlet weak var searchBar: UISearchBar!
+
     @IBOutlet weak var tableView: UITableView!
     
     var loadDBModel = LoadDBModel()
-    var shipNameArray: [String] = []
+    var allShipArray = [Ships]()
     
     
     
@@ -41,21 +42,28 @@ class SearchViewController: UIViewController,loadOKDelegate {
     func loadOK(check: Int) {
         if check == 1 {
             
-            
-            self.shipNameArray = []
             let DBArray = loadDBModel.dataSets
-            for allShips in DBArray {
-                let hoge: [String] = [allShips.shipName]
-                
-                
-                for value in hoge {
-                    
-                    self.shipNameArray.append("\(value)")
-                    
-                    tableView.reloadData()
-                    print("\(shipNameArray)")
-                }
-           }
+            self.allShipArray = []
+            
+
+            for hoge in DBArray {
+                allShipArray.append(Ships(name: hoge.shipName, number: hoge.number))
+            }
+            
+            let hogeItem = allShipArray.filter {
+                (student)  in
+                return student.name.contains("あ")
+            }
+            
+            print("\(hogeItem)")
+//            for ships in hogeItem {
+//                print("\(ships.name)\(ships.number)")
+//            }
+            //print("\(allShipArray)")
+            
+            self.tableView.reloadData()
+            
+
         }
     }
     
@@ -86,15 +94,14 @@ class SearchViewController: UIViewController,loadOKDelegate {
 extension SearchViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return shipNameArray.count
-        //loadDBModel.dataSets.count
+        return allShipArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        cell.textLabel!.text = shipNameArray[indexPath.row]
-//        loadDBModel.dataSets[indexPath.row].shipName
+        cell.textLabel!.text = String(allShipArray[indexPath.row].number)
+
         
         return cell
     }

@@ -8,7 +8,5 @@ target 'JMSDFMeguri' do
   # Pods for JMSDFMeguri
 
 pod 'SDWebImage', '~> 5.0'
-pod 'RxSwift'
-pod 'RxCocoa'
 
 end
