@@ -14,22 +14,30 @@ struct Ships {
 }
 
 
-class SearchViewController: UIViewController,loadOKDelegate {
-    
-    
-    
-    
+class SearchViewController: UITableViewController,loadOKDelegate,UISearchResultsUpdating {
 
-    @IBOutlet weak var tableView: UITableView!
+//    @IBOutlet weak var tableView: UITableView!
     
     var loadDBModel = LoadDBModel()
     var allShipArray = [Ships]()
-    
+    var searchController: UISearchController!
+    var resultsController: ResultsViewController!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadDBModel.loadOKDelegate = self
+        
+        definesPresentationContext = true
+        let resultsController = ResultsViewController()
+        searchController = UISearchController(searchResultsController: resultsController)
+        searchController.obscuresBackgroundDuringPresentation = true
+        searchController.hidesNavigationBarDuringPresentation = true
+        searchController.searchResultsUpdater = self
+        
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.searchController = searchController
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,35 +49,42 @@ class SearchViewController: UIViewController,loadOKDelegate {
     
     func loadOK(check: Int) {
         if check == 1 {
-            
+
             let DBArray = loadDBModel.dataSets
             self.allShipArray = []
+            let resultController = ResultsViewController()
             
-
             for hoge in DBArray {
                 allShipArray.append(Ships(name: hoge.shipName, number: hoge.number))
             }
-            
-            let hogeItem = allShipArray.filter {
-                (student)  in
-                return student.name.contains("あ")
-            }
-            
-            print("\(hogeItem)")
-//            for ships in hogeItem {
-//                print("\(ships.name)\(ships.number)")
-//            }
-            //print("\(allShipArray)")
-            
-            self.tableView.reloadData()
-            
 
+            self.tableView.reloadData()
+            resultController.dataList = self.allShipArray
+            print("\(allShipArray)")
         }
     }
     
+    
+    func updateSearchResults(for searchController: UISearchController) {
+            if let keyword = searchController.searchBar.text, !keyword.isEmpty {
+                resultsController.dataList = allShipArray.filter { data in
+                    return data.name.contains(keyword) }
+            } else {
+                resultsController.dataList = []
+            }
+        }
+    
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+                return allShipArray.count
+        }
 
-
-
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+                cell.textLabel?.text = allShipArray[indexPath.row].name
+            return cell
+        }
     
     
     
@@ -91,19 +106,16 @@ class SearchViewController: UIViewController,loadOKDelegate {
 }
 
 
-extension SearchViewController: UITableViewDelegate,UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allShipArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
-        cell.textLabel!.text = String(allShipArray[indexPath.row].number)
-
-        
-        return cell
-    }
-}
+//extension SearchViewController: UITableViewDelegate,UITableViewDataSource {
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//            return allShipArray.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+//            cell.textLabel?.text = allShipArray[indexPath.row].name
+//        return cell
+//    }
+//}
 
