@@ -14,9 +14,9 @@ struct Ships {
 }
 
 
-class SearchViewController: UITableViewController,loadOKDelegate,UISearchResultsUpdating {
+class SearchViewController: UIViewController,loadOKDelegate,UISearchResultsUpdating {
 
-//    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     var loadDBModel = LoadDBModel()
     var allShipArray = [Ships]()
@@ -28,7 +28,7 @@ class SearchViewController: UITableViewController,loadOKDelegate,UISearchResults
         super.viewDidLoad()
         
         definesPresentationContext = true
-        let resultsController = ResultsViewController()
+        resultsController = ResultsViewController()
         searchController = UISearchController(searchResultsController: resultsController)
         searchController.obscuresBackgroundDuringPresentation = true
         searchController.hidesNavigationBarDuringPresentation = true
@@ -38,6 +38,8 @@ class SearchViewController: UITableViewController,loadOKDelegate,UISearchResults
         navigationItem.searchController = searchController
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        loadDBModel.loadOKDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,14 +54,14 @@ class SearchViewController: UITableViewController,loadOKDelegate,UISearchResults
 
             let DBArray = loadDBModel.dataSets
             self.allShipArray = []
-            let resultController = ResultsViewController()
+
             
             for hoge in DBArray {
                 allShipArray.append(Ships(name: hoge.shipName, number: hoge.number))
             }
 
             self.tableView.reloadData()
-            resultController.dataList = self.allShipArray
+
             print("\(allShipArray)")
         }
     }
@@ -75,16 +77,7 @@ class SearchViewController: UITableViewController,loadOKDelegate,UISearchResults
         }
     
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-                return allShipArray.count
-        }
 
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-                cell.textLabel?.text = allShipArray[indexPath.row].name
-            return cell
-        }
     
     
     
@@ -106,16 +99,20 @@ class SearchViewController: UITableViewController,loadOKDelegate,UISearchResults
 }
 
 
-//extension SearchViewController: UITableViewDelegate,UITableViewDataSource {
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//            return allShipArray.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-//            cell.textLabel?.text = allShipArray[indexPath.row].name
-//        return cell
-//    }
-//}
+extension SearchViewController: UITableViewDelegate,UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return allShipArray.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+ 
+        cell.textLabel?.text = allShipArray[indexPath.row].name
+        
+        
+        return cell
+    }
+}
 
