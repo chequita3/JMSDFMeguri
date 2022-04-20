@@ -40,7 +40,10 @@ class ResultsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        cell.textLabel?.text = dataList[indexPath.row].name
+        cell.textLabel?.text = """
+\(dataList[indexPath.row].number)       \(dataList[indexPath.row].name)
+"""
+        
         
         return cell
     }
