@@ -14,7 +14,7 @@ struct Ships {
 }
 
 
-class SearchViewController: UIViewController,loadOKDelegate,UISearchResultsUpdating {
+class SearchViewController: UIViewController,loadOKDelegate,UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -32,7 +32,8 @@ class SearchViewController: UIViewController,loadOKDelegate,UISearchResultsUpdat
         searchController = UISearchController(searchResultsController: resultsController)
         searchController.obscuresBackgroundDuringPresentation = true
         searchController.hidesNavigationBarDuringPresentation = true
-        searchController.searchResultsUpdater = self
+//        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
         
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
@@ -67,22 +68,44 @@ class SearchViewController: UIViewController,loadOKDelegate,UISearchResultsUpdat
     }
     
     
-    func updateSearchResults(for searchController: UISearchController) {
-        if let keyword = searchController.searchBar.text, !keyword.isEmpty {
-            
-            if let keynumber = Int(keyword) {
-                resultsController.dataList = allShipArray.filter { data in
-                    return data.number == keynumber }
-            } else {
-                resultsController.dataList = allShipArray.filter { data in
-                    return data.name.contains(keyword) }
+//    func updateSearchResults(for searchController: UISearchController) {
+//        if let keyword = searchController.searchBar.text, !keyword.isEmpty {
+//
+//            if let keynumber = Int(keyword) {
+//                resultsController.dataList = allShipArray.filter { data in
+//                    return data.number == keynumber }
+//            } else {
+//                resultsController.dataList = allShipArray.filter { data in
+//                    return data.name.contains(keyword) }
+//            }
+//        }else{
+//            resultsController.dataList = []
+//        }
+//    }
+    
+    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        // searchResultsController を強制的に表示する
+        // (検索バーの日本語変換待ち状態の入力のみだと、searchResultsController 自体が表示されないため）
+        searchController.searchResultsController?.view.isHidden = false
+
+        // 変換中のテキストも正しく取得できるようにするために遅延させる
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) { [weak self] in
+            guard let self = self else { return }
+            if let keyword = searchBar.text, !keyword.isEmpty {
+                            if let keynumber = Int(keyword) {
+                                self.resultsController.dataList = self.allShipArray.filter { data in
+                                    return data.number == keynumber }
+                            } else {
+                                self.resultsController.dataList = self.allShipArray.filter { data in
+                                    return data.name.contains(keyword) }
+                            }
+                        } else {
+                self.resultsController.dataList = []
             }
-        }else{
-            resultsController.dataList = []
         }
+
+        return true
     }
-    
-    
     
     
     
