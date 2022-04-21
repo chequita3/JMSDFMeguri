@@ -144,5 +144,12 @@ extension SearchViewController: UITableViewDelegate,UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let shipDetailVC = storyboard.instantiateViewController(identifier: "shipDetailVC") as! ShipDetailViewController
+        
+        self.present(shipDetailVC, animated: true, completion: nil)
+    }
 }
 

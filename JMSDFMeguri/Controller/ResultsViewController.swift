@@ -21,7 +21,6 @@ class ResultsViewController: UITableViewController {
     }
  
  
-
 //    var tableView:UITableView!
  
 
@@ -46,6 +45,14 @@ class ResultsViewController: UITableViewController {
         
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let shipDetailVC = storyboard.instantiateViewController(identifier: "shipDetailVC") as! ShipDetailViewController
+        
+        self.present(shipDetailVC, animated: true, completion: nil)
     }
 
  

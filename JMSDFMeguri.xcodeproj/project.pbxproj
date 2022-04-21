@@ -25,6 +25,7 @@
 		988EE83727FCFBE700F8E2D1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988EE83627FCFBE700F8E2D1 /* SearchViewController.swift */; };
 		9895D13827FB1E0200835F37 /* DataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9895D13727FB1E0200835F37 /* DataSet.swift */; };
 		98B6679E27F3C6B00092E4C3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 98B6679D27F3C6B00092E4C3 /* FirebaseAuth */; };
+		98BF173128113E8700112FE6 /* ShipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BF173028113E8700112FE6 /* ShipDetailViewController.swift */; };
 		98CF6DB028030C8E00C70A47 /* LoadDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CF6DAF28030C8E00C70A47 /* LoadDBModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		988EE83427FCFB9200F8E2D1 /* SelectTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTypeViewController.swift; sourceTree = "<group>"; };
 		988EE83627FCFBE700F8E2D1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		9895D13727FB1E0200835F37 /* DataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSet.swift; sourceTree = "<group>"; };
+		98BF173028113E8700112FE6 /* ShipDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipDetailViewController.swift; sourceTree = "<group>"; };
 		98CF6DAF28030C8E00C70A47 /* LoadDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDBModel.swift; sourceTree = "<group>"; };
 		B39DA22E4E88B4C0E46762AB /* Pods-JMSDFMeguri.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMSDFMeguri.release.xcconfig"; path = "Target Support Files/Pods-JMSDFMeguri/Pods-JMSDFMeguri.release.xcconfig"; sourceTree = "<group>"; };
 		FC620ABF9659EAFA70436E7A /* Pods_JMSDFMeguri.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMSDFMeguri.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +127,7 @@
 				981879E728086560002C3C2C /* ResultsViewController.swift */,
 				988EE83027FCFB0400F8E2D1 /* SelectHPViewController.swift */,
 				988EE83427FCFB9200F8E2D1 /* SelectTypeViewController.swift */,
+				98BF173028113E8700112FE6 /* ShipDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				988EE83127FCFB0400F8E2D1 /* SelectHPViewController.swift in Sources */,
 				9895D13827FB1E0200835F37 /* DataSet.swift in Sources */,
 				987BDDBB27F12277004015ED /* SceneDelegate.swift in Sources */,
+				98BF173128113E8700112FE6 /* ShipDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
