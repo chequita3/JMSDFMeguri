@@ -69,142 +69,188 @@
             <objects>
                 <viewController storyboardIdentifier="selectHPVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CxX-aV-QQZ" customClass="SelectHPViewController" customModule="JMSDFMeguri" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gQ2-G3-oQL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEM-ar-90m">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZEM-ar-90m">
                                 <rect key="frame" x="0.0" y="44" width="414" height="1156"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEW-GA-CUV">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzt-c0-7Xd">
-                                                <rect key="frame" x="64" y="61" width="286" height="111"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="大湊（青森県）"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gC8-8U-4w8">
-                                                <rect key="frame" x="64" y="275" width="286" height="111"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="横須賀（神奈川県）"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2Z-zW-2sM">
-                                                <rect key="frame" x="64" y="494" width="286" height="111"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="舞鶴（京都府）"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnT-vN-lkb">
-                                                <rect key="frame" x="64" y="702" width="286" height="111"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="呉（広島県）"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TE0-jb-mPC">
-                                                <rect key="frame" x="64" y="919" width="286" height="111"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="佐世保（長崎県）"/>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemMintColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1200" id="BLD-bT-xQf"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="EEW-GA-CUV" firstAttribute="leading" secondItem="ZEM-ar-90m" secondAttribute="leading" id="1z7-Je-ceg"/>
-                                    <constraint firstAttribute="trailing" secondItem="EEW-GA-CUV" secondAttribute="trailing" id="ERl-Ju-3gN"/>
-                                    <constraint firstAttribute="bottom" secondItem="EEW-GA-CUV" secondAttribute="bottom" id="Mhn-xF-K06"/>
-                                    <constraint firstItem="EEW-GA-CUV" firstAttribute="top" secondItem="ZEM-ar-90m" secondAttribute="top" id="PfT-v9-l16"/>
-                                    <constraint firstItem="EEW-GA-CUV" firstAttribute="width" secondItem="ZEM-ar-90m" secondAttribute="width" id="T5e-jo-SrV"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="1b1-f1-f3U"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="brC-FY-nbr"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EEW-GA-CUV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="2766"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzt-c0-7Xd">
+                                        <rect key="frame" x="64" y="61" width="286" height="111"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="大湊（青森県）"/>
+                                        <connections>
+                                            <action selector="ominato:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="Jfq-Th-E3u"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gC8-8U-4w8">
+                                        <rect key="frame" x="64" y="218" width="286" height="111"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="横須賀（神奈川県）"/>
+                                        <connections>
+                                            <action selector="yokosuka:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="n1M-e6-g6H"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2Z-zW-2sM">
+                                        <rect key="frame" x="64" y="391" width="286" height="111"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="舞鶴（京都府）"/>
+                                        <connections>
+                                            <action selector="maizuru:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="dgI-Kv-Dhp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnT-vN-lkb">
+                                        <rect key="frame" x="64" y="570" width="286" height="111"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="呉（広島県）"/>
+                                        <connections>
+                                            <action selector="kure:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="1Nk-E6-GoX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TE0-jb-mPC">
+                                        <rect key="frame" x="64" y="719" width="286" height="111"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="佐世保（長崎県）"/>
+                                        <connections>
+                                            <action selector="sasebo:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="V2j-Ih-wQo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlS-mb-B36">
+                                        <rect key="frame" x="62" y="914" width="286" height="111"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="余市（北海道）"/>
+                                        <connections>
+                                            <action selector="yoichi:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="9bH-kn-6Mn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCd-HG-nAl">
+                                        <rect key="frame" x="62" y="1068" width="286" height="111"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="函館（北海道）"/>
+                                        <connections>
+                                            <action selector="hakodate:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="Nex-mC-0LO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVu-g9-exm">
+                                        <rect key="frame" x="62" y="1199" width="286" height="111"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="神戸（兵庫県）"/>
+                                        <connections>
+                                            <action selector="kobe:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="Whf-Qo-vpe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0n-0k-NHW">
+                                        <rect key="frame" x="62" y="1355" width="286" height="111"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="佐伯（和歌山県）"/>
+                                        <connections>
+                                            <action selector="saeki:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="I1L-Pd-guc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Fv-2C-goe">
+                                        <rect key="frame" x="62" y="1520" width="286" height="111"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="下関（山口県）"/>
+                                        <connections>
+                                            <action selector="shimonoseki:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="yhl-hf-AEU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtM-ld-pjr">
+                                        <rect key="frame" x="64" y="1682" width="286" height="111"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="勝連（沖縄県）"/>
+                                        <connections>
+                                            <action selector="katsuren:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="8Gu-cj-h9H"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="B4e-cl-FXL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="ZEM-ar-90m" firstAttribute="leading" secondItem="B4e-cl-FXL" secondAttribute="leading" id="4nK-1i-o6R"/>
-                            <constraint firstItem="ZEM-ar-90m" firstAttribute="top" secondItem="B4e-cl-FXL" secondAttribute="top" id="EDM-1V-bEg"/>
-                            <constraint firstItem="ZEM-ar-90m" firstAttribute="trailing" secondItem="B4e-cl-FXL" secondAttribute="trailing" id="I3D-eD-GBH"/>
-                            <constraint firstAttribute="bottom" secondItem="ZEM-ar-90m" secondAttribute="bottom" id="ciV-Jf-lcI"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="母港を選んでみましょう！" id="f5o-07-JOC"/>
-                    <size key="freeformSize" width="414" height="1200"/>
-                    <connections>
-                        <segue destination="ixm-cL-zOu" kind="show" id="6OB-bZ-SfZ"/>
-                    </connections>
+                    <size key="freeformSize" width="414" height="2000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="elf-tZ-MjE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3708.6956521739135" y="-220.3125"/>
         </scene>
-        <!--Collection View Controller-->
-        <scene sceneID="g39-l2-asP">
+        <!--Affiliated Ship View Controller-->
+        <scene sceneID="twO-Qm-VrP">
             <objects>
-                <collectionViewController id="ixm-cL-zOu" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="R5g-5t-dVh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                <viewController storyboardIdentifier="AffiliatedShipVC" id="oKG-82-y3X" customClass="AffiliatedShipViewController" customModule="JMSDFMeguri" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xLg-Py-sQp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8qg-L3-PoW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="d2h-88-GU1">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NAb-pu-WsK">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7ql-Xr-bpA">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mne-Cu-xQh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Rnk-DJ-Tuy">
-                            <size key="itemSize" width="187" height="161"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zGy-bE-bA2">
-                                <rect key="frame" x="0.0" y="0.0" width="187" height="161"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dA9-IE-5MX">
-                                    <rect key="frame" x="0.0" y="0.0" width="187" height="161"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRV-Bu-Bbs">
-                                            <rect key="frame" x="24" y="8" width="138" height="88"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZK-ug-Aaa">
-                                            <rect key="frame" x="24" y="118" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0O-RJ-lwi">
-                                            <rect key="frame" x="116" y="115" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </collectionViewCellContentView>
-                                <size key="customSize" width="187" height="161"/>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="ixm-cL-zOu" id="tpE-xk-nic"/>
-                            <outlet property="delegate" destination="ixm-cL-zOu" id="LAK-fI-8ga"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" id="XOb-F9-Mdi"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GDq-WE-uZZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="mne-Cu-xQh" firstAttribute="bottom" secondItem="8qg-L3-PoW" secondAttribute="bottom" id="HWD-GP-BkY"/>
+                            <constraint firstItem="8qg-L3-PoW" firstAttribute="leading" secondItem="mne-Cu-xQh" secondAttribute="leading" id="J3z-pD-Sl3"/>
+                            <constraint firstItem="8qg-L3-PoW" firstAttribute="top" secondItem="mne-Cu-xQh" secondAttribute="top" id="Rml-eJ-U1k"/>
+                            <constraint firstItem="mne-Cu-xQh" firstAttribute="trailing" secondItem="8qg-L3-PoW" secondAttribute="trailing" id="Rya-II-z8o"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="8qg-L3-PoW" id="Ke0-qe-Ehn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yRi-BZ-Hye" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4715.9420289855079" y="-155.35714285714286"/>
+            <point key="canvasLocation" x="4795" y="-199"/>
         </scene>
         <!--Ship Detail View Controller-->
         <scene sceneID="cTv-72-P9p">
@@ -214,11 +260,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3wQ-3u-nLI">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3wQ-3u-nLI">
                                 <rect key="frame" x="0.0" y="44" width="414" height="1722"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AqB-mg-RCg">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AqB-mg-RCg">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9aV-hN-QX3">
                                                 <rect key="frame" x="31" y="107" width="352" height="260"/>
@@ -332,32 +380,19 @@
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemMintColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1800" id="ZH5-nA-gME"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="AqB-mg-RCg" firstAttribute="top" secondItem="3wQ-3u-nLI" secondAttribute="top" id="1fi-vn-af7"/>
-                                    <constraint firstAttribute="bottom" secondItem="AqB-mg-RCg" secondAttribute="bottom" id="Uce-Md-gRC"/>
-                                    <constraint firstItem="AqB-mg-RCg" firstAttribute="width" secondItem="3wQ-3u-nLI" secondAttribute="width" id="UtH-86-9UG"/>
-                                    <constraint firstAttribute="trailing" secondItem="AqB-mg-RCg" secondAttribute="trailing" id="dKo-jY-WCh"/>
-                                    <constraint firstItem="AqB-mg-RCg" firstAttribute="leading" secondItem="3wQ-3u-nLI" secondAttribute="leading" id="ukA-oR-Q1h"/>
-                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="dsw-0Q-aEM"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="3EW-Xb-xP7"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O9t-BY-EQ0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="O9t-BY-EQ0" firstAttribute="trailing" secondItem="3wQ-3u-nLI" secondAttribute="trailing" id="3Jy-Pl-B48"/>
-                            <constraint firstItem="O9t-BY-EQ0" firstAttribute="bottom" secondItem="3wQ-3u-nLI" secondAttribute="bottom" id="72W-Jz-xYa"/>
-                            <constraint firstItem="3wQ-3u-nLI" firstAttribute="top" secondItem="O9t-BY-EQ0" secondAttribute="top" id="n8K-6A-aiU"/>
-                            <constraint firstItem="3wQ-3u-nLI" firstAttribute="leading" secondItem="O9t-BY-EQ0" secondAttribute="leading" id="zOm-5Q-mC8"/>
-                        </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="1800"/>
+                    <connections>
+                        <outlet property="shipNameLabel" destination="0ZS-M6-oDx" id="kxS-HE-Uqr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Io6-1R-NVW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -478,69 +513,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="種類から探してみましょう！" id="7VC-DI-mqh"/>
                     <size key="freeformSize" width="414" height="1200"/>
-                    <connections>
-                        <segue destination="5zK-XO-P4b" kind="show" id="dsl-gw-Kns"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMh-cH-D6E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3708.6956521739135" y="724.55357142857144"/>
-        </scene>
-        <!--Collection View Controller-->
-        <scene sceneID="MOd-Kc-HQF">
-            <objects>
-                <collectionViewController id="5zK-XO-P4b" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Anq-S2-d9B">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IIh-0c-rnD">
-                            <size key="itemSize" width="196" height="177"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="a1l-w5-j35">
-                                <rect key="frame" x="0.0" y="0.0" width="196" height="177"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sM8-Kr-kTl">
-                                    <rect key="frame" x="0.0" y="0.0" width="196" height="177"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NXa-Y4-g7p">
-                                            <rect key="frame" x="8" y="8" width="180" height="100"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l39-qv-3xk">
-                                            <rect key="frame" x="32" y="129" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtM-E6-xnf">
-                                            <rect key="frame" x="123" y="131" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </collectionViewCellContentView>
-                                <size key="customSize" width="196" height="177"/>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="5zK-XO-P4b" id="6wF-uC-Rjz"/>
-                            <outlet property="delegate" destination="5zK-XO-P4b" id="sJu-wO-1Oz"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" id="Ahc-kX-9by"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f8N-cT-7El" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2928.985507246377" y="771.42857142857144"/>
+            <point key="canvasLocation" x="3759" y="1092"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Pd-RO-dDG">
@@ -570,6 +546,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

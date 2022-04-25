@@ -29,6 +29,7 @@ class SearchViewController: UIViewController,loadOKDelegate,UISearchBarDelegate 
         
         definesPresentationContext = true
         resultsController = ResultsViewController()
+        
         searchController = UISearchController(searchResultsController: resultsController)
         searchController.obscuresBackgroundDuringPresentation = true
         searchController.hidesNavigationBarDuringPresentation = true
@@ -53,6 +54,8 @@ class SearchViewController: UIViewController,loadOKDelegate,UISearchBarDelegate 
     func loadOK(check: Int) {
         if check == 1 {
             
+            resultsController.loadDBModel.dataSets = self.loadDBModel.dataSets
+            
             let DBArray = loadDBModel.dataSets
             self.allShipArray = []
             
@@ -63,7 +66,7 @@ class SearchViewController: UIViewController,loadOKDelegate,UISearchBarDelegate 
             
             self.tableView.reloadData()
             
-            print("\(allShipArray)")
+            
         }
     }
     
@@ -148,6 +151,8 @@ extension SearchViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let shipDetailVC = storyboard.instantiateViewController(identifier: "shipDetailVC") as! ShipDetailViewController
+        shipDetailVC.shipName = self.allShipArray[indexPath.row].name
+        shipDetailVC.shipsArray = loadDBModel.dataSets
         
         self.present(shipDetailVC, animated: true, completion: nil)
     }

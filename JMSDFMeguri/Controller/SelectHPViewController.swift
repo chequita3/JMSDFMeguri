@@ -7,23 +7,118 @@
 
 import UIKit
 
-class SelectHPViewController: UIViewController {
+class SelectHPViewController: UIViewController,loadOKDelegate {
+    
+    var loadDBModel = LoadDBModel()
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        loadDBModel.loadOKDelegate = self
+ 
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        loadDBModel.loadContents()
+        
     }
-    */
-
+    
+    func loadOK(check: Int) {
+        if check == 1 {
+            
+        }
+    }
+    
+    @IBAction func ominato(_ sender: Any) {
+        let AffiliatedShipVC = self.storyboard?.instantiateViewController(identifier: "AffiliatedShipVC") as! AffiliatedShipViewController
+        
+        AffiliatedShipVC.shipsArray = self.loadDBModel.dataSets
+        AffiliatedShipVC.homePortName = "大湊"
+        navigationController?.pushViewController(AffiliatedShipVC, animated: true)
+    }
+    
+    @IBAction func yokosuka(_ sender: Any) {
+        let AffiliatedShipVC = self.storyboard?.instantiateViewController(identifier: "AffiliatedShipVC") as! AffiliatedShipViewController
+        
+        AffiliatedShipVC.shipsArray = self.loadDBModel.dataSets
+        AffiliatedShipVC.homePortName = "横須賀"
+        navigationController?.pushViewController(AffiliatedShipVC, animated: true)
+    }
+    
+    @IBAction func maizuru(_ sender: Any) {
+        let AffiliatedShipVC = self.storyboard?.instantiateViewController(identifier: "AffiliatedShipVC") as! AffiliatedShipViewController
+        
+        AffiliatedShipVC.shipsArray = self.loadDBModel.dataSets
+        AffiliatedShipVC.homePortName = "舞鶴"
+        navigationController?.pushViewController(AffiliatedShipVC, animated: true)
+    }
+    
+    @IBAction func kure(_ sender: Any) {
+        let AffiliatedShipVC = self.storyboard?.instantiateViewController(identifier: "AffiliatedShipVC") as! AffiliatedShipViewController
+        
+        AffiliatedShipVC.shipsArray = self.loadDBModel.dataSets
+        AffiliatedShipVC.homePortName = "呉"
+        navigationController?.pushViewController(AffiliatedShipVC, animated: true)
+    }
+    
+    @IBAction func sasebo(_ sender: Any) {
+        let AffiliatedShipVC = self.storyboard?.instantiateViewController(identifier: "AffiliatedShipVC") as! AffiliatedShipViewController
+        
+        AffiliatedShipVC.shipsArray = self.loadDBModel.dataSets
+        AffiliatedShipVC.homePortName = "佐世保"
+        navigationController?.pushViewController(AffiliatedShipVC, animated: true)
+    }
+    
+    @IBAction func yoichi(_ sender: Any) {
+        let AffiliatedShipVC = self.storyboard?.instantiateViewController(identifier: "AffiliatedShipVC") as! AffiliatedShipViewController
+        
+        AffiliatedShipVC.shipsArray = self.loadDBModel.dataSets
+        AffiliatedShipVC.homePortName = "余市"
+        navigationController?.pushViewController(AffiliatedShipVC, animated: true)
+    }
+    
+    @IBAction func hakodate(_ sender: Any) {
+        let AffiliatedShipVC = self.storyboard?.instantiateViewController(identifier: "AffiliatedShipVC") as! AffiliatedShipViewController
+        
+        AffiliatedShipVC.shipsArray = self.loadDBModel.dataSets
+        AffiliatedShipVC.homePortName = "大湊"
+        navigationController?.pushViewController(AffiliatedShipVC, animated: true)
+    }
+    
+    @IBAction func kobe(_ sender: Any) {
+        let AffiliatedShipVC = self.storyboard?.instantiateViewController(identifier: "AffiliatedShipVC") as! AffiliatedShipViewController
+        
+        AffiliatedShipVC.shipsArray = self.loadDBModel.dataSets
+        AffiliatedShipVC.homePortName = "神戸"
+        navigationController?.pushViewController(AffiliatedShipVC, animated: true)
+    }
+    
+    @IBAction func saeki(_ sender: Any) {
+        let AffiliatedShipVC = self.storyboard?.instantiateViewController(identifier: "AffiliatedShipVC") as! AffiliatedShipViewController
+        
+        AffiliatedShipVC.shipsArray = self.loadDBModel.dataSets
+        AffiliatedShipVC.homePortName = "佐伯"
+        navigationController?.pushViewController(AffiliatedShipVC, animated: true)
+    }
+    
+    @IBAction func shimonoseki(_ sender: Any) {
+        let AffiliatedShipVC = self.storyboard?.instantiateViewController(identifier: "AffiliatedShipVC") as! AffiliatedShipViewController
+        
+        AffiliatedShipVC.shipsArray = self.loadDBModel.dataSets
+        AffiliatedShipVC.homePortName = "下関"
+        navigationController?.pushViewController(AffiliatedShipVC, animated: true)
+    }
+    
+    @IBAction func katsuren(_ sender: Any) {
+        let AffiliatedShipVC = self.storyboard?.instantiateViewController(identifier: "AffiliatedShipVC") as! AffiliatedShipViewController
+        
+        AffiliatedShipVC.shipsArray = self.loadDBModel.dataSets
+        AffiliatedShipVC.homePortName = "勝連"
+        navigationController?.pushViewController(AffiliatedShipVC, animated: true)
+    }
+    
 }

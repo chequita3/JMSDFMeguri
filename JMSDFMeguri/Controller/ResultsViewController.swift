@@ -21,7 +21,7 @@ class ResultsViewController: UITableViewController {
     }
  
  
-//    var tableView:UITableView!
+    var loadDBModel = LoadDBModel()
  
 
     override func viewDidLoad() {
@@ -51,6 +51,8 @@ class ResultsViewController: UITableViewController {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let shipDetailVC = storyboard.instantiateViewController(identifier: "shipDetailVC") as! ShipDetailViewController
+        shipDetailVC.shipName = self.dataList[indexPath.row].name
+        shipDetailVC.shipsArray = loadDBModel.dataSets
         
         self.present(shipDetailVC, animated: true, completion: nil)
     }

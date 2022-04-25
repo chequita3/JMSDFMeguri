@@ -11,14 +11,28 @@ class ShipDetailViewController: UIViewController {
     
     var loadDBModel = LoadDBModel()
     var shipName = String()
+    var shipsArray = [DataSet]()
 
+    @IBOutlet weak var shipNameLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        loadDBModel.loadShipDetail(shipName: "\(shipName)")
-        // Do any additional setup after loading the view.
+        shipNameLabel.text = self.shipName
+        filteredContents()
     }
     
+    func filteredContents(){
+        let filertedData = self.shipsArray.filter ({
+            
+            (data: DataSet) -> Bool in
+            
+            //フィルター結果として、残したい要素だけtrueを返す（検索条件）
+            return data.shipName == "\(self.shipName)"
+        })
+        
+
+    }
 
     /*
     // MARK: - Navigation

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3098989C0CB5D4B72C1FF664 /* Pods_JMSDFMeguri.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC620ABF9659EAFA70436E7A /* Pods_JMSDFMeguri.framework */; };
 		981879E828086560002C3C2C /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981879E728086560002C3C2C /* ResultsViewController.swift */; };
+		987A377E2816EC0700E94615 /* AffiliatedShipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987A377D2816EC0700E94615 /* AffiliatedShipViewController.swift */; };
 		987BDDB927F12277004015ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987BDDB827F12277004015ED /* AppDelegate.swift */; };
 		987BDDBB27F12277004015ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987BDDBA27F12277004015ED /* SceneDelegate.swift */; };
 		987BDDBD27F12277004015ED /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987BDDBC27F12277004015ED /* FirstViewController.swift */; };
@@ -27,11 +28,14 @@
 		98B6679E27F3C6B00092E4C3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 98B6679D27F3C6B00092E4C3 /* FirebaseAuth */; };
 		98BF173128113E8700112FE6 /* ShipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BF173028113E8700112FE6 /* ShipDetailViewController.swift */; };
 		98CF6DB028030C8E00C70A47 /* LoadDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CF6DAF28030C8E00C70A47 /* LoadDBModel.swift */; };
+		98E3002E28169BED005D74D0 /* AffiliatedShipCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E3002C28169BED005D74D0 /* AffiliatedShipCollectionViewCell.swift */; };
+		98E3002F28169BED005D74D0 /* AffiliatedShipCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98E3002D28169BED005D74D0 /* AffiliatedShipCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		326BB66F4F7E591809651300 /* Pods-JMSDFMeguri.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMSDFMeguri.debug.xcconfig"; path = "Target Support Files/Pods-JMSDFMeguri/Pods-JMSDFMeguri.debug.xcconfig"; sourceTree = "<group>"; };
 		981879E728086560002C3C2C /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		987A377D2816EC0700E94615 /* AffiliatedShipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffiliatedShipViewController.swift; sourceTree = "<group>"; };
 		987BDDB527F12277004015ED /* JMSDFMeguri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMSDFMeguri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		987BDDB827F12277004015ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		987BDDBA27F12277004015ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +51,8 @@
 		9895D13727FB1E0200835F37 /* DataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSet.swift; sourceTree = "<group>"; };
 		98BF173028113E8700112FE6 /* ShipDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipDetailViewController.swift; sourceTree = "<group>"; };
 		98CF6DAF28030C8E00C70A47 /* LoadDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDBModel.swift; sourceTree = "<group>"; };
+		98E3002C28169BED005D74D0 /* AffiliatedShipCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffiliatedShipCollectionViewCell.swift; sourceTree = "<group>"; };
+		98E3002D28169BED005D74D0 /* AffiliatedShipCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AffiliatedShipCollectionViewCell.xib; sourceTree = "<group>"; };
 		B39DA22E4E88B4C0E46762AB /* Pods-JMSDFMeguri.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMSDFMeguri.release.xcconfig"; path = "Target Support Files/Pods-JMSDFMeguri/Pods-JMSDFMeguri.release.xcconfig"; sourceTree = "<group>"; };
 		FC620ABF9659EAFA70436E7A /* Pods_JMSDFMeguri.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMSDFMeguri.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,6 +132,9 @@
 				988EE83627FCFBE700F8E2D1 /* SearchViewController.swift */,
 				981879E728086560002C3C2C /* ResultsViewController.swift */,
 				988EE83027FCFB0400F8E2D1 /* SelectHPViewController.swift */,
+				987A377D2816EC0700E94615 /* AffiliatedShipViewController.swift */,
+				98E3002C28169BED005D74D0 /* AffiliatedShipCollectionViewCell.swift */,
+				98E3002D28169BED005D74D0 /* AffiliatedShipCollectionViewCell.xib */,
 				988EE83427FCFB9200F8E2D1 /* SelectTypeViewController.swift */,
 				98BF173028113E8700112FE6 /* ShipDetailViewController.swift */,
 			);
@@ -216,6 +225,7 @@
 				987BDDC527F12279004015ED /* LaunchScreen.storyboard in Resources */,
 				987BDDCD27F123E1004015ED /* GoogleService-Info.plist in Resources */,
 				987BDDC227F12279004015ED /* Assets.xcassets in Resources */,
+				98E3002F28169BED005D74D0 /* AffiliatedShipCollectionViewCell.xib in Resources */,
 				987BDDC027F12277004015ED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,10 +283,12 @@
 				988EE83727FCFBE700F8E2D1 /* SearchViewController.swift in Sources */,
 				987BDDBD27F12277004015ED /* FirstViewController.swift in Sources */,
 				98CF6DB028030C8E00C70A47 /* LoadDBModel.swift in Sources */,
+				98E3002E28169BED005D74D0 /* AffiliatedShipCollectionViewCell.swift in Sources */,
 				987BDDB927F12277004015ED /* AppDelegate.swift in Sources */,
 				981879E828086560002C3C2C /* ResultsViewController.swift in Sources */,
 				988EE83127FCFB0400F8E2D1 /* SelectHPViewController.swift in Sources */,
 				9895D13827FB1E0200835F37 /* DataSet.swift in Sources */,
+				987A377E2816EC0700E94615 /* AffiliatedShipViewController.swift in Sources */,
 				987BDDBB27F12277004015ED /* SceneDelegate.swift in Sources */,
 				98BF173128113E8700112FE6 /* ShipDetailViewController.swift in Sources */,
 			);
