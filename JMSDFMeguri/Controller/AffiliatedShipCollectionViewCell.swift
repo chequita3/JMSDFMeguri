@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class AffiliatedShipCollectionViewCell: UICollectionViewCell {
     
@@ -20,7 +21,9 @@ class AffiliatedShipCollectionViewCell: UICollectionViewCell {
     }
     
     func setup(image: String, number: Int, name: String){
-        shipImageView.image =
+        
+        let url = URL(string: image)
+        shipImageView.sd_setImage(with: url, completed: nil)
         shipNumberLabel.text = String(number)
         shipNameLabel.text = name
     }

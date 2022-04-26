@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3098989C0CB5D4B72C1FF664 /* Pods_JMSDFMeguri.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC620ABF9659EAFA70436E7A /* Pods_JMSDFMeguri.framework */; };
 		981879E828086560002C3C2C /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981879E728086560002C3C2C /* ResultsViewController.swift */; };
+		9849607C2817E55E00253D45 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849607B2817E55E00253D45 /* UIColor.swift */; };
 		987A377E2816EC0700E94615 /* AffiliatedShipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987A377D2816EC0700E94615 /* AffiliatedShipViewController.swift */; };
 		987BDDB927F12277004015ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987BDDB827F12277004015ED /* AppDelegate.swift */; };
 		987BDDBB27F12277004015ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987BDDBA27F12277004015ED /* SceneDelegate.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		326BB66F4F7E591809651300 /* Pods-JMSDFMeguri.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMSDFMeguri.debug.xcconfig"; path = "Target Support Files/Pods-JMSDFMeguri/Pods-JMSDFMeguri.debug.xcconfig"; sourceTree = "<group>"; };
 		981879E728086560002C3C2C /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		9849607B2817E55E00253D45 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		987A377D2816EC0700E94615 /* AffiliatedShipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffiliatedShipViewController.swift; sourceTree = "<group>"; };
 		987BDDB527F12277004015ED /* JMSDFMeguri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMSDFMeguri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		987BDDB827F12277004015ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				9895D13727FB1E0200835F37 /* DataSet.swift */,
 				98CF6DAF28030C8E00C70A47 /* LoadDBModel.swift */,
+				9849607B2817E55E00253D45 /* UIColor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				981879E828086560002C3C2C /* ResultsViewController.swift in Sources */,
 				988EE83127FCFB0400F8E2D1 /* SelectHPViewController.swift in Sources */,
 				9895D13827FB1E0200835F37 /* DataSet.swift in Sources */,
+				9849607C2817E55E00253D45 /* UIColor.swift in Sources */,
 				987A377E2816EC0700E94615 /* AffiliatedShipViewController.swift in Sources */,
 				987BDDBB27F12277004015ED /* SceneDelegate.swift in Sources */,
 				98BF173128113E8700112FE6 /* ShipDetailViewController.swift in Sources */,

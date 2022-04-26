@@ -9,6 +9,9 @@ import UIKit
 
 class SelectHPViewController: UIViewController,loadOKDelegate {
     
+    
+
+    
     var loadDBModel = LoadDBModel()
     
 
@@ -23,13 +26,21 @@ class SelectHPViewController: UIViewController,loadOKDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+
+        //無効にする
+        view.window?.beginIgnoringInteractionEvents()
+        print("無効にしたよ")
+        
+        
         loadDBModel.loadContents()
         
     }
     
     func loadOK(check: Int) {
         if check == 1 {
-            
+            //有効にする
+            view.window?.endIgnoringInteractionEvents()
+            print("有効にしたよ")
         }
     }
     
@@ -122,3 +133,21 @@ class SelectHPViewController: UIViewController,loadOKDelegate {
     }
     
 }
+
+
+extension UIWindow {
+    func beginIgnoringInteractionEvents() {
+        let overlayView = UIView(frame: bounds)
+        overlayView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        overlayView.tag = 10000
+        addSubview(overlayView)
+    }
+
+    func endIgnoringInteractionEvents() {
+        viewWithTag(10000)?.removeFromSuperview()
+    }
+}
+
+
+        
+
