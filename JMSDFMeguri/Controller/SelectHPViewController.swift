@@ -29,7 +29,7 @@ class SelectHPViewController: UIViewController,loadOKDelegate {
 
         //無効にする
         view.window?.beginIgnoringInteractionEvents()
-        print("無効にしたよ")
+        
         
         
         loadDBModel.loadContents()
@@ -40,7 +40,7 @@ class SelectHPViewController: UIViewController,loadOKDelegate {
         if check == 1 {
             //有効にする
             view.window?.endIgnoringInteractionEvents()
-            print("有効にしたよ")
+            
         }
     }
     

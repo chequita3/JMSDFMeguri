@@ -71,20 +71,7 @@ class SearchViewController: UIViewController,loadOKDelegate,UISearchBarDelegate 
     }
     
     
-//    func updateSearchResults(for searchController: UISearchController) {
-//        if let keyword = searchController.searchBar.text, !keyword.isEmpty {
-//
-//            if let keynumber = Int(keyword) {
-//                resultsController.dataList = allShipArray.filter { data in
-//                    return data.number == keynumber }
-//            } else {
-//                resultsController.dataList = allShipArray.filter { data in
-//                    return data.name.contains(keyword) }
-//            }
-//        }else{
-//            resultsController.dataList = []
-//        }
-//    }
+
     
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         // searchResultsController を強制的に表示する

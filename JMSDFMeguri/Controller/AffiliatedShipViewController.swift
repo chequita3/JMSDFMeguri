@@ -16,6 +16,7 @@ class AffiliatedShipViewController: UIViewController {
     var homePortName = String()
     var shipsArray = [DataSet]()
     var filteredShipsArray = [DataSet]()
+    var loadDBModel = LoadDBModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,7 @@ class AffiliatedShipViewController: UIViewController {
         
         filteredShipsArray = shipsArray.filter{ data in
             return data.homePort.contains(homePortName) }
+        print("\(filteredShipsArray)")
 
     }
 
@@ -47,7 +49,10 @@ func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection s
 func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AffiliatedShipCollectionViewCell", for: indexPath) as! AffiliatedShipCollectionViewCell
     
-    cell.setup(image: filteredShipsArray[indexPath.row].shipImage1, number: filteredShipsArray[indexPath.row].number, name: filteredShipsArray[indexPath.row].shipName)
+    loadDBModel.createDownloadURL(passString: filteredShipsArray[indexPath.row].shipImage1)
+    print("\(loadDBModel.downloadURLString)")
+    
+    cell.setup(image: loadDBModel.downloadURLString, number: filteredShipsArray[indexPath.row].number, name: filteredShipsArray[indexPath.row].shipName)
     
     return cell
 }

@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import FirebaseStorage
 
 protocol loadOKDelegate {
     
@@ -18,6 +19,7 @@ class LoadDBModel {
     var dataSets = [DataSet]()
     let db = Firestore.firestore()
     var loadOKDelegate:loadOKDelegate?
+    var downloadURLString = String()
     
     func loadContents() {
         
@@ -30,7 +32,7 @@ class LoadDBModel {
                 return
             }
             if let snapShotDoc = snapShot?.documents{
-                print("データ受信開始")
+               
                 
                 for doc in snapShotDoc{
                     
@@ -92,7 +94,6 @@ class LoadDBModel {
                         
                         self.dataSets.append(newDataSet)
                         self.loadOKDelegate?.loadOK(check: 1)
-                        print("データを受信完了")
                     }
                 }
             }
@@ -100,6 +101,19 @@ class LoadDBModel {
     }
     
     
-    
+    func createDownloadURL(passString: String){
+        
+        let storage = Storage.storage()
+        let storageRef = storage.reference(forURL: "\(passString)")
+        
+        storageRef.downloadURL { url, error in
+            if error != nil {
+                print("error")
+                print("エラー")
+            } else {
+                self.downloadURLString = String("\(url)")
+            }
+        }
+    }
 
 }
