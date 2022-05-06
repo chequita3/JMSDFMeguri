@@ -19,7 +19,8 @@ class LoadDBModel {
     var dataSets = [DataSet]()
     let db = Firestore.firestore()
     var loadOKDelegate:loadOKDelegate?
-    var downloadURLString = String()
+    var downloadURL:URL!
+    
     
     func loadContents() {
         
@@ -101,7 +102,7 @@ class LoadDBModel {
     }
     
     
-    func createDownloadURL(passString: String){
+    func createDownloadURL(passString: String, completion: @escaping (() -> Void)){
         
         let storage = Storage.storage()
         let storageRef = storage.reference(forURL: "\(passString)")
@@ -109,9 +110,11 @@ class LoadDBModel {
         storageRef.downloadURL { url, error in
             if error != nil {
                 print("error")
-                print("エラー")
             } else {
-                self.downloadURLString = String("\(url)")
+                self.downloadURL = url
+                print("URL作成")
+                completion()
+                
             }
         }
     }

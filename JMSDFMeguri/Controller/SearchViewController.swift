@@ -33,7 +33,6 @@ class SearchViewController: UIViewController,loadOKDelegate,UISearchBarDelegate 
         searchController = UISearchController(searchResultsController: resultsController)
         searchController.obscuresBackgroundDuringPresentation = true
         searchController.hidesNavigationBarDuringPresentation = true
-//        searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
         
         navigationItem.hidesSearchBarWhenScrolling = false

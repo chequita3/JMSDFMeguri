@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+import SwiftUI
 
 class AffiliatedShipCollectionViewCell: UICollectionViewCell {
     
@@ -15,15 +16,32 @@ class AffiliatedShipCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var shipNumberLabel: UILabel!
     @IBOutlet weak var shipNameLabel: UILabel!
     
+    var loadDBModel = LoadDBModel()
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            contentView.topAnchor.constraint(equalTo: topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
     }
     
-    func setup(image: String, number: Int, name: String){
+    func setup(image: String, number: Int, name: String) {
         
-        let url = URL(string: image)
-        shipImageView.sd_setImage(with: url, completed: nil)
+        
+        loadDBModel.createDownloadURL(passString: image, completion: { [self] in
+            self.shipImageView.sd_setImage(with: loadDBModel.downloadURL, completed: nil)
+            print("画像セット")
+        })
+
+        
+        
         shipNumberLabel.text = String(number)
         shipNameLabel.text = name
     }
