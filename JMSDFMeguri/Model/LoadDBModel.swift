@@ -112,7 +112,7 @@ class LoadDBModel {
                 print("error")
             } else {
                 self.downloadURL = url
-                print("URL作成")
+ 
                 completion()
                 
             }

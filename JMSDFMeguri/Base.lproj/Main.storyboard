@@ -235,6 +235,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="CollectionViewFlowLayout" destination="d2h-88-GU1" id="fkE-NU-X6b"/>
                         <outlet property="collectionView" destination="8qg-L3-PoW" id="Ke0-qe-Ehn"/>
                     </connections>
                 </viewController>

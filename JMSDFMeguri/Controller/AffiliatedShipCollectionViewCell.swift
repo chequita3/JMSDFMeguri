@@ -23,13 +23,10 @@ class AffiliatedShipCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         contentView.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            contentView.topAnchor.constraint(equalTo: topAnchor),
-            contentView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
+                contentView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+                contentView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+                contentView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+                contentView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
     }
     
     func setup(image: String, number: Int, name: String) {
@@ -39,11 +36,11 @@ class AffiliatedShipCollectionViewCell: UICollectionViewCell {
             self.shipImageView.sd_setImage(with: loadDBModel.downloadURL, completed: nil)
             print("画像セット")
         })
-
+        
         
         
         shipNumberLabel.text = String(number)
         shipNameLabel.text = name
     }
-
+    
 }
