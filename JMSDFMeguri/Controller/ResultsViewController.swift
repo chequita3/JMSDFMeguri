@@ -27,7 +27,8 @@ class ResultsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        let nib = UINib(nibName: "TableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "TableViewCell")
     }
  
  
@@ -37,14 +38,18 @@ class ResultsViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        cell.textLabel?.text = """
-\(dataList[indexPath.row].number)       \(dataList[indexPath.row].name)
-"""
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
+        
+        cell.setup(number: dataList[indexPath.row].number, name: dataList[indexPath.row].name)
         
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        tableView.estimatedRowHeight = 100
+        return UITableView.automaticDimension
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

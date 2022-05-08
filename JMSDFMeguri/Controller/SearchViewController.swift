@@ -38,9 +38,11 @@ class SearchViewController: UIViewController,loadOKDelegate,UISearchBarDelegate 
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        let nib = UINib(nibName: "TableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "TableViewCell")
         
         loadDBModel.loadOKDelegate = self
+        tableView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,29 +72,29 @@ class SearchViewController: UIViewController,loadOKDelegate,UISearchBarDelegate 
     }
     
     
-
+    
     
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         // searchResultsController を強制的に表示する
         // (検索バーの日本語変換待ち状態の入力のみだと、searchResultsController 自体が表示されないため）
         searchController.searchResultsController?.view.isHidden = false
-
+        
         // 変換中のテキストも正しく取得できるようにするために遅延させる
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) { [weak self] in
             guard let self = self else { return }
             if let keyword = searchBar.text, !keyword.isEmpty {
-                            if let keynumber = Int(keyword) {
-                                self.resultsController.dataList = self.allShipArray.filter { data in
-                                    return data.number == keynumber }
-                            } else {
-                                self.resultsController.dataList = self.allShipArray.filter { data in
-                                    return data.name.contains(keyword) }
-                            }
-                        } else {
+                if let keynumber = Int(keyword) {
+                    self.resultsController.dataList = self.allShipArray.filter { data in
+                        return data.number == keynumber }
+                } else {
+                    self.resultsController.dataList = self.allShipArray.filter { data in
+                        return data.name.contains(keyword) }
+                }
+            } else {
                 self.resultsController.dataList = []
             }
         }
-
+        
         return true
     }
     
@@ -124,12 +126,10 @@ extension SearchViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        cell.textLabel?.text = """
-\(allShipArray[indexPath.row].number)       \(allShipArray[indexPath.row].name)
-"""
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
         
+        cell.setup(number: allShipArray[indexPath.row].number, name: allShipArray[indexPath.row].name)
         
         return cell
     }
@@ -142,5 +142,11 @@ extension SearchViewController: UITableViewDelegate,UITableViewDataSource {
         
         self.present(shipDetailVC, animated: true, completion: nil)
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        tableView.estimatedRowHeight = 100
+        return UITableView.automaticDimension
+    }
 }
+
 

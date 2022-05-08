@@ -28,6 +28,8 @@
 		9895D13827FB1E0200835F37 /* DataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9895D13727FB1E0200835F37 /* DataSet.swift */; };
 		98B6679E27F3C6B00092E4C3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 98B6679D27F3C6B00092E4C3 /* FirebaseAuth */; };
 		98BF173128113E8700112FE6 /* ShipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BF173028113E8700112FE6 /* ShipDetailViewController.swift */; };
+		98CA27122828120A005AA041 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CA27102828120A005AA041 /* TableViewCell.swift */; };
+		98CA27132828120A005AA041 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98CA27112828120A005AA041 /* TableViewCell.xib */; };
 		98CF6DB028030C8E00C70A47 /* LoadDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CF6DAF28030C8E00C70A47 /* LoadDBModel.swift */; };
 		98E3002E28169BED005D74D0 /* AffiliatedShipCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E3002C28169BED005D74D0 /* AffiliatedShipCollectionViewCell.swift */; };
 		98E3002F28169BED005D74D0 /* AffiliatedShipCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98E3002D28169BED005D74D0 /* AffiliatedShipCollectionViewCell.xib */; };
@@ -52,6 +54,8 @@
 		988EE83627FCFBE700F8E2D1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		9895D13727FB1E0200835F37 /* DataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSet.swift; sourceTree = "<group>"; };
 		98BF173028113E8700112FE6 /* ShipDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipDetailViewController.swift; sourceTree = "<group>"; };
+		98CA27102828120A005AA041 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		98CA27112828120A005AA041 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		98CF6DAF28030C8E00C70A47 /* LoadDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDBModel.swift; sourceTree = "<group>"; };
 		98E3002C28169BED005D74D0 /* AffiliatedShipCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffiliatedShipCollectionViewCell.swift; sourceTree = "<group>"; };
 		98E3002D28169BED005D74D0 /* AffiliatedShipCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AffiliatedShipCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 				987BDDBC27F12277004015ED /* FirstViewController.swift */,
 				988EE83627FCFBE700F8E2D1 /* SearchViewController.swift */,
 				981879E728086560002C3C2C /* ResultsViewController.swift */,
+				98CA27102828120A005AA041 /* TableViewCell.swift */,
+				98CA27112828120A005AA041 /* TableViewCell.xib */,
 				988EE83027FCFB0400F8E2D1 /* SelectHPViewController.swift */,
 				987A377D2816EC0700E94615 /* AffiliatedShipViewController.swift */,
 				98E3002C28169BED005D74D0 /* AffiliatedShipCollectionViewCell.swift */,
@@ -226,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				987BDDC527F12279004015ED /* LaunchScreen.storyboard in Resources */,
+				98CA27132828120A005AA041 /* TableViewCell.xib in Resources */,
 				987BDDCD27F123E1004015ED /* GoogleService-Info.plist in Resources */,
 				987BDDC227F12279004015ED /* Assets.xcassets in Resources */,
 				98E3002F28169BED005D74D0 /* AffiliatedShipCollectionViewCell.xib in Resources */,
@@ -287,6 +294,7 @@
 				987BDDBD27F12277004015ED /* FirstViewController.swift in Sources */,
 				98CF6DB028030C8E00C70A47 /* LoadDBModel.swift in Sources */,
 				98E3002E28169BED005D74D0 /* AffiliatedShipCollectionViewCell.swift in Sources */,
+				98CA27122828120A005AA041 /* TableViewCell.swift in Sources */,
 				987BDDB927F12277004015ED /* AppDelegate.swift in Sources */,
 				981879E828086560002C3C2C /* ResultsViewController.swift in Sources */,
 				988EE83127FCFB0400F8E2D1 /* SelectHPViewController.swift in Sources */,

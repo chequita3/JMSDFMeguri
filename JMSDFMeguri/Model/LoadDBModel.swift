@@ -24,7 +24,7 @@ class LoadDBModel {
     
     func loadContents() {
         
-        db.collection("Destroyers").order(by: "shipName", descending: true).addSnapshotListener {(snapShot, error) in
+        db.collection("Destroyers").order(by: "number", descending: false).addSnapshotListener {(snapShot, error) in
             
             self.dataSets = []
             
