@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -68,138 +69,94 @@
             <objects>
                 <viewController storyboardIdentifier="selectHPVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CxX-aV-QQZ" customClass="SelectHPViewController" customModule="JMSDFMeguri" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gQ2-G3-oQL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZEM-ar-90m">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1156"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEM-ar-90m">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1122"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEW-GA-CUV">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzt-c0-7Xd">
+                                                <rect key="frame" x="64" y="61" width="286" height="111"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="大湊（青森県）"/>
+                                                <connections>
+                                                    <action selector="ominato:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="Jfq-Th-E3u"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gC8-8U-4w8">
+                                                <rect key="frame" x="64" y="218" width="286" height="111"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="横須賀（神奈川県）"/>
+                                                <connections>
+                                                    <action selector="yokosuka:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="n1M-e6-g6H"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2Z-zW-2sM">
+                                                <rect key="frame" x="64" y="391" width="286" height="111"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="舞鶴（京都府）"/>
+                                                <connections>
+                                                    <action selector="maizuru:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="dgI-Kv-Dhp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnT-vN-lkb">
+                                                <rect key="frame" x="64" y="570" width="286" height="111"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="呉（広島県）"/>
+                                                <connections>
+                                                    <action selector="kure:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="1Nk-E6-GoX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TE0-jb-mPC">
+                                                <rect key="frame" x="64" y="719" width="286" height="111"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="佐世保（長崎県）"/>
+                                                <connections>
+                                                    <action selector="sasebo:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="V2j-Ih-wQo"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="8dx-RC-cuU"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="EEW-GA-CUV" firstAttribute="top" secondItem="ZEM-ar-90m" secondAttribute="top" id="JEm-rt-ESs"/>
+                                    <constraint firstItem="EEW-GA-CUV" firstAttribute="width" secondItem="ZEM-ar-90m" secondAttribute="width" id="PyF-EE-rbr"/>
+                                    <constraint firstItem="EEW-GA-CUV" firstAttribute="width" secondItem="ZEM-ar-90m" secondAttribute="width" id="Thv-5a-VMa"/>
+                                    <constraint firstItem="EEW-GA-CUV" firstAttribute="leading" secondItem="ZEM-ar-90m" secondAttribute="leading" id="TpS-Bi-IFC"/>
+                                    <constraint firstAttribute="trailing" secondItem="EEW-GA-CUV" secondAttribute="trailing" id="VAD-uC-VCS"/>
+                                    <constraint firstAttribute="bottom" secondItem="EEW-GA-CUV" secondAttribute="bottom" id="YbY-o2-SNU"/>
+                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="1b1-f1-f3U"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="brC-FY-nbr"/>
                             </scrollView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EEW-GA-CUV">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="2766"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzt-c0-7Xd">
-                                        <rect key="frame" x="64" y="61" width="286" height="111"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="大湊（青森県）"/>
-                                        <connections>
-                                            <action selector="ominato:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="Jfq-Th-E3u"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gC8-8U-4w8">
-                                        <rect key="frame" x="64" y="218" width="286" height="111"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="横須賀（神奈川県）"/>
-                                        <connections>
-                                            <action selector="yokosuka:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="n1M-e6-g6H"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2Z-zW-2sM">
-                                        <rect key="frame" x="64" y="391" width="286" height="111"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="舞鶴（京都府）"/>
-                                        <connections>
-                                            <action selector="maizuru:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="dgI-Kv-Dhp"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnT-vN-lkb">
-                                        <rect key="frame" x="64" y="570" width="286" height="111"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="呉（広島県）"/>
-                                        <connections>
-                                            <action selector="kure:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="1Nk-E6-GoX"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TE0-jb-mPC">
-                                        <rect key="frame" x="64" y="719" width="286" height="111"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="佐世保（長崎県）"/>
-                                        <connections>
-                                            <action selector="sasebo:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="V2j-Ih-wQo"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlS-mb-B36">
-                                        <rect key="frame" x="62" y="914" width="286" height="111"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="余市（北海道）"/>
-                                        <connections>
-                                            <action selector="yoichi:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="9bH-kn-6Mn"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCd-HG-nAl">
-                                        <rect key="frame" x="62" y="1068" width="286" height="111"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="函館（北海道）"/>
-                                        <connections>
-                                            <action selector="hakodate:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="Nex-mC-0LO"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVu-g9-exm">
-                                        <rect key="frame" x="62" y="1199" width="286" height="111"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="神戸（兵庫県）"/>
-                                        <connections>
-                                            <action selector="kobe:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="Whf-Qo-vpe"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0n-0k-NHW">
-                                        <rect key="frame" x="62" y="1355" width="286" height="111"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="佐伯（和歌山県）"/>
-                                        <connections>
-                                            <action selector="saeki:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="I1L-Pd-guc"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Fv-2C-goe">
-                                        <rect key="frame" x="62" y="1520" width="286" height="111"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="下関（山口県）"/>
-                                        <connections>
-                                            <action selector="shimonoseki:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="yhl-hf-AEU"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtM-ld-pjr">
-                                        <rect key="frame" x="64" y="1682" width="286" height="111"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="勝連（沖縄県）"/>
-                                        <connections>
-                                            <action selector="katsuren:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="8Gu-cj-h9H"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemMintColor"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="B4e-cl-FXL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZEM-ar-90m" firstAttribute="trailing" secondItem="B4e-cl-FXL" secondAttribute="trailing" id="2Vf-6N-9Lp"/>
+                            <constraint firstItem="ZEM-ar-90m" firstAttribute="top" secondItem="B4e-cl-FXL" secondAttribute="top" id="3ic-3M-2N0"/>
+                            <constraint firstItem="B4e-cl-FXL" firstAttribute="bottom" secondItem="ZEM-ar-90m" secondAttribute="bottom" id="M9d-cE-zsm"/>
+                            <constraint firstItem="ZEM-ar-90m" firstAttribute="leading" secondItem="B4e-cl-FXL" secondAttribute="leading" id="TMT-Sz-Qoz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="母港を選んでみましょう！" id="f5o-07-JOC"/>
-                    <size key="freeformSize" width="414" height="2000"/>
+                    <size key="freeformSize" width="414" height="1200"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="elf-tZ-MjE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -416,14 +373,14 @@
             <objects>
                 <viewController storyboardIdentifier="selectTypeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NTj-uF-Ln8" customClass="SelectTypeViewController" customModule="JMSDFMeguri" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xkG-Lo-piO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBN-L1-AWc">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1156"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1322"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jv3-qh-oiu">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hw3-Bg-Pm7">
                                                 <rect key="frame" x="64" y="61" width="286" height="221"/>
@@ -435,7 +392,7 @@
 イージス艦！（DDG）</string>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="pickImageButton:" destination="NTj-uF-Ln8" eventType="touchUpInside" id="je5-d4-Zrl"/>
+                                                    <action selector="ButtonForDDG:" destination="NTj-uF-Ln8" eventType="touchUpInside" id="0Dm-U3-X4Y"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZ5-pD-FQq">
@@ -447,6 +404,9 @@
                                                     <string key="title">艦隊の主力！
 汎用護衛艦！（DD）</string>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="ButtonForDD:" destination="NTj-uF-Ln8" eventType="touchUpInside" id="zS0-a4-ahe"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAH-cC-qQs">
                                                 <rect key="frame" x="64" y="664" width="286" height="221"/>
@@ -457,6 +417,9 @@
                                                     <string key="title">海上の航空基地！
 ヘリコプター搭載護衛艦！（DDH）</string>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="ButtonForDDH:" destination="NTj-uF-Ln8" eventType="touchUpInside" id="JAv-aR-eoe"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmQ-Ob-qUm">
                                                 <rect key="frame" x="64" y="967" width="286" height="221"/>
@@ -467,20 +430,22 @@
                                                     <string key="title">近海・沿岸を守る護衛艦！
 あぶくま型護衛艦！（DE）</string>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="ButtonForDE:" destination="NTj-uF-Ln8" eventType="touchUpInside" id="882-T5-Ka5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemMintColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1800" id="mGo-NQ-2OF"/>
+                                            <constraint firstAttribute="height" constant="1300" id="9hO-Ef-qlO"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Jv3-qh-oiu" firstAttribute="top" secondItem="dBN-L1-AWc" secondAttribute="top" id="2HF-PG-lfp"/>
-                                    <constraint firstAttribute="trailing" secondItem="Jv3-qh-oiu" secondAttribute="trailing" id="BKr-jO-Ij4"/>
-                                    <constraint firstAttribute="bottom" secondItem="Jv3-qh-oiu" secondAttribute="bottom" id="JtF-Ow-O5Q"/>
-                                    <constraint firstItem="Jv3-qh-oiu" firstAttribute="leading" secondItem="dBN-L1-AWc" secondAttribute="leading" id="WYd-iC-Ek8"/>
-                                    <constraint firstItem="Jv3-qh-oiu" firstAttribute="width" secondItem="dBN-L1-AWc" secondAttribute="width" id="iIa-Ms-t8C"/>
+                                    <constraint firstItem="Jv3-qh-oiu" firstAttribute="width" secondItem="dBN-L1-AWc" secondAttribute="width" id="TWF-6e-A2w"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jv3-qh-oiu" secondAttribute="bottom" id="Z2r-KO-yNm"/>
+                                    <constraint firstItem="Jv3-qh-oiu" firstAttribute="top" secondItem="dBN-L1-AWc" secondAttribute="top" id="bmp-DM-t3R"/>
+                                    <constraint firstItem="Jv3-qh-oiu" firstAttribute="leading" secondItem="dBN-L1-AWc" secondAttribute="leading" id="j4q-Xx-xsN"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jv3-qh-oiu" secondAttribute="trailing" id="juU-MR-B3W"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="q84-dN-ze3"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="c5q-kh-xfv"/>
@@ -489,18 +454,61 @@
                         <viewLayoutGuide key="safeArea" id="bn3-Mp-AKL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dBN-L1-AWc" firstAttribute="leading" secondItem="bn3-Mp-AKL" secondAttribute="leading" id="7nb-Of-v2Z"/>
-                            <constraint firstItem="dBN-L1-AWc" firstAttribute="trailing" secondItem="bn3-Mp-AKL" secondAttribute="trailing" id="OnH-I7-1cR"/>
-                            <constraint firstAttribute="bottom" secondItem="dBN-L1-AWc" secondAttribute="bottom" id="QCK-us-2ho"/>
-                            <constraint firstItem="dBN-L1-AWc" firstAttribute="top" secondItem="bn3-Mp-AKL" secondAttribute="top" id="rO0-Jw-kqw"/>
+                            <constraint firstItem="dBN-L1-AWc" firstAttribute="leading" secondItem="bn3-Mp-AKL" secondAttribute="leading" id="2PA-UV-bZL"/>
+                            <constraint firstItem="dBN-L1-AWc" firstAttribute="trailing" secondItem="bn3-Mp-AKL" secondAttribute="trailing" id="5Rp-8W-JKY"/>
+                            <constraint firstItem="dBN-L1-AWc" firstAttribute="bottom" secondItem="bn3-Mp-AKL" secondAttribute="bottom" id="jsn-5k-plH"/>
+                            <constraint firstItem="dBN-L1-AWc" firstAttribute="top" secondItem="bn3-Mp-AKL" secondAttribute="top" id="sMB-I3-Edg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="種類から探してみましょう！" id="7VC-DI-mqh"/>
-                    <size key="freeformSize" width="414" height="1200"/>
+                    <size key="freeformSize" width="414" height="1400"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMh-cH-D6E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3759" y="1092"/>
+        </scene>
+        <!--Sorted Ship View Controller-->
+        <scene sceneID="ubG-r7-h2w">
+            <objects>
+                <viewController storyboardIdentifier="SortedShipVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KiS-vW-Ypj" customClass="SortedShipViewController" customModule="JMSDFMeguri" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W3C-zK-wel">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Z8-sG-7hk">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sod-Ah-VzL">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iSE-hx-aJq">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Wkd-nj-voZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4m1-WZ-r2M"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4m1-WZ-r2M" firstAttribute="bottom" secondItem="4Z8-sG-7hk" secondAttribute="bottom" id="67s-Sb-6z2"/>
+                            <constraint firstItem="4Z8-sG-7hk" firstAttribute="top" secondItem="4m1-WZ-r2M" secondAttribute="top" id="bcL-g7-Dfv"/>
+                            <constraint firstItem="4Z8-sG-7hk" firstAttribute="leading" secondItem="4m1-WZ-r2M" secondAttribute="leading" id="c1Q-ad-ddr"/>
+                            <constraint firstItem="4m1-WZ-r2M" firstAttribute="trailing" secondItem="4Z8-sG-7hk" secondAttribute="trailing" id="rig-9o-x93"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FSO-wO-z0o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4784" y="1097"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Pd-RO-dDG">
@@ -527,9 +535,6 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

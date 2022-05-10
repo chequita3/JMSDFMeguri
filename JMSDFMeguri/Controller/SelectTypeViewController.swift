@@ -9,30 +9,74 @@ import UIKit
 import FirebaseStorage
 import SDWebImage
 
-class SelectTypeViewController: UIViewController {
+class SelectTypeViewController: UIViewController,loadOKDelegate {
     
-    let storage = Storage.storage()
-    
-    @IBOutlet weak var image: UIImageView!
+    var loadDBModel = LoadDBModel()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        loadDBModel.loadOKDelegate = self
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
-    @IBAction func pickImageButton(_ sender: Any) {
+        //無効にする
+        view.window?.beginIgnoringInteractionEvents()
+
+        loadDBModel.loadContents()
         
-        let storageRef = storage.reference(forURL: "gs://jmsdfmeguri.appspot.com/Destroyer/Hyuga1.jpeg")
-        storageRef.downloadURL { url, error in
-            if error != nil {
-                print("error")
-            } else {
-                self.image.sd_setImage(with: url, completed: nil)
-            }
+    }
+
+    func loadOK(check: Int) {
+        if check == 1 {
+            //有効にする
+            view.window?.endIgnoringInteractionEvents()
+            
         }
     }
+    
+    
+    @IBAction func ButtonForDDG(_ sender: Any) {
+        let SortedShipVC = self.storyboard?.instantiateViewController(identifier: "SortedShipVC") as! SortedShipViewController
+        
+        SortedShipVC.shipsArray = self.loadDBModel.dataSets
+        SortedShipVC.shipType = "DDG"
+        navigationController?.pushViewController(SortedShipVC, animated: true)
+    }
+    
+    
+    @IBAction func ButtonForDD(_ sender: Any) {
+        let SortedShipVC = self.storyboard?.instantiateViewController(identifier: "SortedShipVC") as! SortedShipViewController
+        
+        SortedShipVC.shipsArray = self.loadDBModel.dataSets
+        SortedShipVC.shipType = "DD"
+        navigationController?.pushViewController(SortedShipVC, animated: true)
+    }
+    
+    
+    @IBAction func ButtonForDDH(_ sender: Any) {
+        let SortedShipVC = self.storyboard?.instantiateViewController(identifier: "SortedShipVC") as! SortedShipViewController
+        
+        SortedShipVC.shipsArray = self.loadDBModel.dataSets
+        SortedShipVC.shipType = "DDH"
+        navigationController?.pushViewController(SortedShipVC, animated: true)
+    }
+    
+    
+    @IBAction func ButtonForDE(_ sender: Any) {
+        let SortedShipVC = self.storyboard?.instantiateViewController(identifier: "SortedShipVC") as! SortedShipViewController
+        
+        SortedShipVC.shipsArray = self.loadDBModel.dataSets
+        SortedShipVC.shipType = "DE"
+        navigationController?.pushViewController(SortedShipVC, animated: true)
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
