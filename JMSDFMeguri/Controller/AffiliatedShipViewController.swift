@@ -21,7 +21,7 @@ class AffiliatedShipViewController: UIViewController {
     var homePortName = String()
     var shipsArray = [DataSet]()
     var filteredShipsArray = [DataSet]()
-    var loadDBModel = LoadDBModel()
+//    var loadDBModel = LoadDBModel()
     
     
     override func viewDidLoad() {

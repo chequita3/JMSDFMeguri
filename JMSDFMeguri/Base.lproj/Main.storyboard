@@ -56,7 +56,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="linkColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ig5-sF-JVg"/>
                 </viewController>
@@ -505,6 +505,10 @@
                             <constraint firstItem="4m1-WZ-r2M" firstAttribute="trailing" secondItem="4Z8-sG-7hk" secondAttribute="trailing" id="rig-9o-x93"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="CollectionViewFlowLayout" destination="sod-Ah-VzL" id="dgx-ln-gh5"/>
+                        <outlet property="collectionView" destination="4Z8-sG-7hk" id="qKO-7K-cX9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FSO-wO-z0o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -530,6 +534,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
