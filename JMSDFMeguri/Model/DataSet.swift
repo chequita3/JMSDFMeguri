@@ -20,6 +20,7 @@ struct DataSet {
     let birthday:String
     let length:String
     let width:String
+    let depth:String
     let displacement:String
     let capacity:String
     let topSpeed:String
@@ -33,5 +34,6 @@ struct DataSet {
     let equipments8:String
     let equipments9:String
     let equipments10:String
+    let career:String
     let toWiki:String
 }

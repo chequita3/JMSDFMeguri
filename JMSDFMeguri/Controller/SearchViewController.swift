@@ -18,6 +18,11 @@ class SearchViewController: UIViewController,loadOKDelegate,UISearchBarDelegate 
     
     @IBOutlet weak var tableView: UITableView!
     
+    let alertController: UIAlertController = UIAlertController(title: "通信エラー", message: "電波状況の良いところで再度お試しください", preferredStyle: .alert)
+    let defaultAction: UIAlertAction = UIAlertAction(title: "Default", style: .default, handler: { (action:UIAlertAction) -> Void in
+        print("アラート表示")
+    })
+    
     var loadDBModel = LoadDBModel()
     var allShipArray = [Ships]()
     var searchController: UISearchController!
@@ -48,6 +53,7 @@ class SearchViewController: UIViewController,loadOKDelegate,UISearchBarDelegate 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        alertController.addAction(defaultAction)
         loadDBModel.loadContents()
         
     }
@@ -68,6 +74,8 @@ class SearchViewController: UIViewController,loadOKDelegate,UISearchBarDelegate 
             self.tableView.reloadData()
             
             
+        } else if check == 2 {
+           present(alertController, animated: true, completion: nil)
         }
     }
     
@@ -135,12 +143,10 @@ extension SearchViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let shipDetailVC = storyboard.instantiateViewController(identifier: "shipDetailVC") as! ShipDetailViewController
-        shipDetailVC.shipName = self.allShipArray[indexPath.row].name
-        shipDetailVC.shipsArray = loadDBModel.dataSets
         
-        self.present(shipDetailVC, animated: true, completion: nil)
+        let shipDetailVC = self.storyboard?.instantiateViewController(identifier: "shipDetailVC") as! ShipDetailViewController
+        
+        navigationController?.pushViewController(shipDetailVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

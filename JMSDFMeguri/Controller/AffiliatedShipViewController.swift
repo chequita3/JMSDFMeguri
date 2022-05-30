@@ -69,13 +69,14 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
 }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let shipDetailVC = storyboard.instantiateViewController(identifier: "shipDetailVC") as! ShipDetailViewController
+
+        
+        let shipDetailVC = self.storyboard?.instantiateViewController(identifier: "shipDetailVC") as! ShipDetailViewController
         
         shipDetailVC.shipName = self.filteredShipsArray[indexPath.row].shipName
         shipDetailVC.shipsArray = self.shipsArray
         
-        self.present(shipDetailVC, animated: true, completion: nil)
+        navigationController?.pushViewController(shipDetailVC, animated: true)
     }
 
 }

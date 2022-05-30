@@ -30,7 +30,7 @@ class LoadDBModel {
             
             if error != nil{
                 print("データの受信に失敗しました")
-                return
+                self.loadOKDelegate?.loadOK(check: 2)
             }
             if let snapShotDoc = snapShot?.documents{
                
@@ -51,6 +51,7 @@ class LoadDBModel {
                        let birthday = data["birthday"] as? String,
                        let length = data["length"] as? String,
                        let width = data["width"] as? String,
+                       let depth = data["depth"] as? String,
                        let displacement = data["displacement"] as? String,
                        let capacity = data["capacity"] as? String,
                        let topSpeed = data["topSpeed"] as? String,
@@ -64,6 +65,7 @@ class LoadDBModel {
                        let equipments8 = data["equipments8"] as? String,
                        let equipments9 = data["equipments9"] as? String,
                        let equipments10 = data["equipments10"] as? String,
+                       let career = data["career"] as? String,
                        let toWiki = data["toWiki"] as? String {
                         
                         
@@ -78,6 +80,7 @@ class LoadDBModel {
                                                  birthday: birthday,
                                                  length: length,
                                                  width: width,
+                                                 depth: depth,
                                                  displacement: displacement,
                                                  capacity: capacity,
                                                  topSpeed: topSpeed,
@@ -91,6 +94,7 @@ class LoadDBModel {
                                                  equipments8: equipments8,
                                                  equipments9: equipments9,
                                                  equipments10: equipments10,
+                                                 career: career,
                                                  toWiki: toWiki)
                         
                         self.dataSets.append(newDataSet)
