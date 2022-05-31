@@ -17,46 +17,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="さぁ、護衛艦を見つけてみましょう" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hl9-4v-sbH">
-                                <rect key="frame" x="42" y="88" width="342" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8om-9J-A0y">
-                                <rect key="frame" x="36" y="686" width="342" height="158"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="種類から探してみる" image="艦種（種類）から"/>
-                                <connections>
-                                    <action selector="toSelectTypeVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g8r-Bp-58D"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxI-oS-uLJ">
-                                <rect key="frame" x="36" y="487" width="348" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="母港から探してみる" image="母港（所在地）から"/>
-                                <connections>
-                                    <action selector="toSelectHPVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sPG-gt-j8R"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nl-2k-xzH">
-                                <rect key="frame" x="36" y="203" width="342" height="158"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="番号、名前から探してみる" image="番号・名前"/>
-                                <connections>
-                                    <action selector="toSearchVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bt6-dv-b88"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bib-st-cQw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="r4I-Mp-zZj">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="836"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="護衛艦を見つけてみましょう!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hl9-4v-sbH">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="27.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OdN-Ix-T6K">
+                                                <rect key="frame" x="0.0" y="77.5" width="414" height="758.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nl-2k-xzH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="9nl-2k-xzH" secondAttribute="height" multiplier="16:9" id="i6x-gp-c0x"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="番号、名前から探してみる" image="番号・名前 "/>
+                                                        <connections>
+                                                            <action selector="toSearchVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bt6-dv-b88"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxI-oS-uLJ">
+                                                        <rect key="frame" x="0.0" y="263" width="414" height="233"/>
+                                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="kxI-oS-uLJ" secondAttribute="height" multiplier="16:9" id="cGN-24-Sd0"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="母港から探してみる" image="母港（所在地）から"/>
+                                                        <connections>
+                                                            <action selector="toSelectHPVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sPG-gt-j8R"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8om-9J-A0y">
+                                                        <rect key="frame" x="0.0" y="526" width="414" height="232.5"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="8om-9J-A0y" secondAttribute="height" multiplier="16:9" id="anW-00-nTb"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="種類から探してみる" image="艦種（種類）から"/>
+                                                        <connections>
+                                                            <action selector="toSelectTypeVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g8r-Bp-58D"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="r4I-Mp-zZj" secondAttribute="trailing" id="EE1-HX-aVN"/>
+                                    <constraint firstItem="r4I-Mp-zZj" firstAttribute="top" secondItem="bib-st-cQw" secondAttribute="top" id="OrY-6M-kDF"/>
+                                    <constraint firstAttribute="bottom" secondItem="r4I-Mp-zZj" secondAttribute="bottom" id="Ytw-Ul-88s"/>
+                                    <constraint firstItem="r4I-Mp-zZj" firstAttribute="width" secondItem="bib-st-cQw" secondAttribute="width" id="ioh-Ac-Par"/>
+                                    <constraint firstItem="r4I-Mp-zZj" firstAttribute="leading" secondItem="bib-st-cQw" secondAttribute="leading" id="voh-sr-hNb"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="tqS-Nl-2jr"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="6fW-4h-w1x"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="linkColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bib-st-cQw" secondAttribute="trailing" id="4tJ-t4-ADa"/>
+                            <constraint firstItem="bib-st-cQw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Z77-Qj-ogK"/>
+                            <constraint firstItem="bib-st-cQw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="k1x-xB-Nss"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bib-st-cQw" secondAttribute="bottom" id="oou-yy-A7X"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ig5-sF-JVg"/>
                 </viewController>
@@ -735,7 +770,7 @@
     </scenes>
     <resources>
         <image name="母港（所在地）から" width="1920" height="1080"/>
-        <image name="番号・名前" width="1920" height="1080"/>
+        <image name="番号・名前 " width="1920" height="1080"/>
         <image name="艦種（種類）から" width="1920" height="1080"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
