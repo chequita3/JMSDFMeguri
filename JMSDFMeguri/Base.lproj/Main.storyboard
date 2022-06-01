@@ -20,22 +20,23 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bib-st-cQw">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="r4I-Mp-zZj">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="836"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="r4I-Mp-zZj">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="767.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="護衛艦を見つけてみましょう!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hl9-4v-sbH">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="27.5"/>
+                                                <rect key="frame" x="52" y="0.0" width="310.5" height="27.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OdN-Ix-T6K">
-                                                <rect key="frame" x="0.0" y="77.5" width="414" height="758.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OdN-Ix-T6K">
+                                                <rect key="frame" x="20" y="77.5" width="374" height="690"/>
                                                 <subviews>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nl-2k-xzH">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+                                                        <rect key="frame" x="0.5" y="0.0" width="373" height="210"/>
                                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="height" constant="210" id="SVp-uy-oLa"/>
                                                             <constraint firstAttribute="width" secondItem="9nl-2k-xzH" secondAttribute="height" multiplier="16:9" id="i6x-gp-c0x"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -45,9 +46,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxI-oS-uLJ">
-                                                        <rect key="frame" x="0.0" y="263" width="414" height="233"/>
+                                                        <rect key="frame" x="0.5" y="240" width="373" height="210"/>
                                                         <color key="backgroundColor" systemColor="systemTealColor"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="height" constant="210" id="Bu1-lZ-9bO"/>
                                                             <constraint firstAttribute="width" secondItem="kxI-oS-uLJ" secondAttribute="height" multiplier="16:9" id="cGN-24-Sd0"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -57,9 +59,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8om-9J-A0y">
-                                                        <rect key="frame" x="0.0" y="526" width="414" height="232.5"/>
+                                                        <rect key="frame" x="0.5" y="480" width="373" height="210"/>
                                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="height" constant="210" id="Xdk-sK-UvX"/>
                                                             <constraint firstAttribute="width" secondItem="8om-9J-A0y" secondAttribute="height" multiplier="16:9" id="anW-00-nTb"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -71,6 +74,10 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="OdN-Ix-T6K" firstAttribute="leading" secondItem="r4I-Mp-zZj" secondAttribute="leading" constant="20" id="Ooq-W9-lGV"/>
+                                            <constraint firstAttribute="trailing" secondItem="OdN-Ix-T6K" secondAttribute="trailing" constant="20" id="rdV-p3-vU0"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -111,61 +118,84 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="1122"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEW-GA-CUV">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzt-c0-7Xd">
-                                                <rect key="frame" x="64" y="61" width="286" height="111"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="大湊（青森県）"/>
-                                                <connections>
-                                                    <action selector="ominato:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="Jfq-Th-E3u"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gC8-8U-4w8">
-                                                <rect key="frame" x="64" y="218" width="286" height="111"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="横須賀（神奈川県）"/>
-                                                <connections>
-                                                    <action selector="yokosuka:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="n1M-e6-g6H"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2Z-zW-2sM">
-                                                <rect key="frame" x="64" y="391" width="286" height="111"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="舞鶴（京都府）"/>
-                                                <connections>
-                                                    <action selector="maizuru:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="dgI-Kv-Dhp"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnT-vN-lkb">
-                                                <rect key="frame" x="64" y="570" width="286" height="111"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="呉（広島県）"/>
-                                                <connections>
-                                                    <action selector="kure:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="1Nk-E6-GoX"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TE0-jb-mPC">
-                                                <rect key="frame" x="64" y="719" width="286" height="111"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="佐世保（長崎県）"/>
-                                                <connections>
-                                                    <action selector="sasebo:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="V2j-Ih-wQo"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="KGL-V0-p1j">
+                                                <rect key="frame" x="20" y="40" width="374" height="910"/>
+                                                <subviews>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzt-c0-7Xd">
+                                                        <rect key="frame" x="53.5" y="0.0" width="267" height="150"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="150" id="CcG-Kp-3wt"/>
+                                                            <constraint firstAttribute="width" secondItem="Qzt-c0-7Xd" secondAttribute="height" multiplier="16:9" id="eAu-ZW-Klm"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="大湊（青森県）" image="大湊"/>
+                                                        <connections>
+                                                            <action selector="ominato:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="Jfq-Th-E3u"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gC8-8U-4w8">
+                                                        <rect key="frame" x="53.5" y="190" width="267" height="150"/>
+                                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="gC8-8U-4w8" secondAttribute="height" multiplier="16:9" id="Tjh-sJ-ZsM"/>
+                                                            <constraint firstAttribute="height" constant="150" id="bPk-1B-kuo"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="横須賀（神奈川県）" image="横須賀"/>
+                                                        <connections>
+                                                            <action selector="yokosuka:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="n1M-e6-g6H"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2Z-zW-2sM">
+                                                        <rect key="frame" x="53.5" y="380" width="267" height="150"/>
+                                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="q2Z-zW-2sM" secondAttribute="height" multiplier="16:9" id="NzU-S2-5PW"/>
+                                                            <constraint firstAttribute="height" constant="150" id="YuY-we-5WS"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="舞鶴（京都府）" image="舞鶴"/>
+                                                        <connections>
+                                                            <action selector="maizuru:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="dgI-Kv-Dhp"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnT-vN-lkb">
+                                                        <rect key="frame" x="53.5" y="570" width="267" height="150"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="FnT-vN-lkb" secondAttribute="height" multiplier="16:9" id="bsr-OI-jkl"/>
+                                                            <constraint firstAttribute="height" constant="150" id="kxe-ef-qGA"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="呉（広島県）" image="呉"/>
+                                                        <connections>
+                                                            <action selector="kure:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="1Nk-E6-GoX"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TE0-jb-mPC">
+                                                        <rect key="frame" x="53.5" y="760" width="267" height="150"/>
+                                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="TE0-jb-mPC" secondAttribute="height" multiplier="16:9" id="avj-f0-kfW"/>
+                                                            <constraint firstAttribute="height" constant="150" id="tEs-oX-Zg8"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="佐世保（長崎県）" image="佐世保"/>
+                                                        <connections>
+                                                            <action selector="sasebo:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="V2j-Ih-wQo"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1000" id="8dx-RC-cuU"/>
+                                            <constraint firstAttribute="trailing" secondItem="KGL-V0-p1j" secondAttribute="trailing" constant="20" id="3po-eo-Aos"/>
+                                            <constraint firstAttribute="height" constant="1200" id="8dx-RC-cuU"/>
+                                            <constraint firstItem="KGL-V0-p1j" firstAttribute="top" secondItem="EEW-GA-CUV" secondAttribute="top" constant="40" id="Zxq-9k-bNm"/>
+                                            <constraint firstItem="KGL-V0-p1j" firstAttribute="leading" secondItem="EEW-GA-CUV" secondAttribute="leading" constant="20" id="ik4-FC-Bm9"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -182,7 +212,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="B4e-cl-FXL"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="tintColor"/>
                         <constraints>
                             <constraint firstItem="ZEM-ar-90m" firstAttribute="trailing" secondItem="B4e-cl-FXL" secondAttribute="trailing" id="2Vf-6N-9Lp"/>
                             <constraint firstItem="ZEM-ar-90m" firstAttribute="top" secondItem="B4e-cl-FXL" secondAttribute="top" id="3ic-3M-2N0"/>
@@ -249,8 +279,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AqB-mg-RCg">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="2100"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="n8F-Ja-iht">
-                                                <rect key="frame" x="8" y="284" width="398" height="727.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="n8F-Ja-iht">
+                                                <rect key="frame" x="8" y="284" width="398" height="756.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="aCn-gH-nVX">
                                                         <rect key="frame" x="0.0" y="0.0" width="219" height="30"/>
@@ -291,7 +321,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2lx-4t-3C2">
-                                                        <rect key="frame" x="0.0" y="69" width="82" height="63"/>
+                                                        <rect key="frame" x="0.0" y="80" width="82" height="63"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="コメント" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUJ-m7-8pr">
                                                                 <rect key="frame" x="0.0" y="0.0" width="82" height="24"/>
@@ -309,182 +339,157 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="fHf-O4-33h">
-                                                        <rect key="frame" x="0.0" y="171" width="273" height="360.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fHf-O4-33h">
+                                                        <rect key="frame" x="0.0" y="193" width="222.5" height="343"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="基本情報" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5s-u7-UrH">
-                                                                <rect key="frame" x="0.0" y="0.0" width="69.5" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="82" height="24"/>
                                                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="110" translatesAutoresizingMaskIntoConstraints="NO" id="QGr-fj-r46">
-                                                                <rect key="frame" x="0.0" y="42.5" width="273" height="20.5"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="kmV-83-2tf">
+                                                                <rect key="frame" x="0.0" y="39" width="222.5" height="304"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="母港（居住地）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSm-BO-HAU">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="121.5" height="20.5"/>
-                                                                        <color key="backgroundColor" systemColor="tintColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbU-Qc-TGg">
-                                                                        <rect key="frame" x="231.5" y="0.0" width="41.5" height="20.5"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9jZ-MC-lhq">
-                                                                <rect key="frame" x="0.0" y="85" width="185.5" height="20.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="進水日（誕生日）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIG-Fc-cFw">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="139" height="20.5"/>
-                                                                        <color key="backgroundColor" systemColor="tintColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yt3-T1-H5l">
-                                                                        <rect key="frame" x="144" y="0.0" width="41.5" height="20.5"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="141" translatesAutoresizingMaskIntoConstraints="NO" id="eaV-DK-X4x">
-                                                                <rect key="frame" x="0.0" y="127.5" width="217.5" height="20.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="長さ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6C-Lu-1a0">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="20.5"/>
-                                                                        <color key="backgroundColor" systemColor="tintColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGW-vg-6T0">
-                                                                        <rect key="frame" x="176" y="0.0" width="41.5" height="20.5"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="158" translatesAutoresizingMaskIntoConstraints="NO" id="k62-MO-mbk">
-                                                                <rect key="frame" x="0.0" y="170" width="217" height="20.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="幅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhk-0a-TmO">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="17.5" height="20.5"/>
-                                                                        <color key="backgroundColor" systemColor="tintColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTk-8z-tkT">
-                                                                        <rect key="frame" x="175.5" y="0.0" width="41.5" height="20.5"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="144" translatesAutoresizingMaskIntoConstraints="NO" id="rEd-mi-gnQ">
-                                                                <rect key="frame" x="0.0" y="212.5" width="220.5" height="20.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="深さ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqF-5x-7sb">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="20.5"/>
-                                                                        <color key="backgroundColor" systemColor="tintColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWA-II-TPu">
-                                                                        <rect key="frame" x="179" y="0.0" width="41.5" height="20.5"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="hWX-Ra-wU2">
-                                                                <rect key="frame" x="0.0" y="255" width="220.5" height="20.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="基準排水量（体重）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDL-s6-c5I">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="156" height="20.5"/>
-                                                                        <color key="backgroundColor" systemColor="tintColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2q-lY-Dbi">
-                                                                        <rect key="frame" x="179" y="0.0" width="41.5" height="20.5"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="141" translatesAutoresizingMaskIntoConstraints="NO" id="Rou-Qf-ayR">
-                                                                <rect key="frame" x="0.0" y="297.5" width="217.5" height="20.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="定員" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihu-af-mIA">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="20.5"/>
-                                                                        <color key="backgroundColor" systemColor="tintColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIR-x0-wX2">
-                                                                        <rect key="frame" x="176" y="0.0" width="41.5" height="20.5"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="102" translatesAutoresizingMaskIntoConstraints="NO" id="vaT-hg-IQF">
-                                                                <rect key="frame" x="0.0" y="340" width="213" height="20.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最大速力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9s-ca-3nm">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="20.5"/>
-                                                                        <color key="backgroundColor" systemColor="tintColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVD-IP-9Ow">
-                                                                        <rect key="frame" x="171.5" y="0.0" width="41.5" height="20.5"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fX2-Gi-hyq">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="156" height="304"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="母港（居住地）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSm-BO-HAU">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="121.5" height="20.5"/>
+                                                                                <color key="backgroundColor" systemColor="tintColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="進水日（誕生日）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIG-Fc-cFw">
+                                                                                <rect key="frame" x="0.0" y="40.5" width="139" height="20.5"/>
+                                                                                <color key="backgroundColor" systemColor="tintColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="長さ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6C-Lu-1a0">
+                                                                                <rect key="frame" x="0.0" y="81" width="35" height="20.5"/>
+                                                                                <color key="backgroundColor" systemColor="tintColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="幅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhk-0a-TmO">
+                                                                                <rect key="frame" x="0.0" y="121.5" width="17.5" height="20.5"/>
+                                                                                <color key="backgroundColor" systemColor="tintColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="深さ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqF-5x-7sb">
+                                                                                <rect key="frame" x="0.0" y="162" width="35" height="20.5"/>
+                                                                                <color key="backgroundColor" systemColor="tintColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="基準排水量（体重）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDL-s6-c5I">
+                                                                                <rect key="frame" x="0.0" y="202.5" width="156" height="20.5"/>
+                                                                                <color key="backgroundColor" systemColor="tintColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="定員" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihu-af-mIA">
+                                                                                <rect key="frame" x="0.0" y="243" width="35" height="20.5"/>
+                                                                                <color key="backgroundColor" systemColor="tintColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最大速力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9s-ca-3nm">
+                                                                                <rect key="frame" x="0.0" y="283.5" width="69.5" height="20.5"/>
+                                                                                <color key="backgroundColor" systemColor="tintColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fZs-JP-HMb">
+                                                                        <rect key="frame" x="181" y="0.0" width="41.5" height="304"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbU-Qc-TGg">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yt3-T1-H5l">
+                                                                                <rect key="frame" x="0.0" y="40.5" width="41.5" height="20.5"/>
+                                                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGW-vg-6T0">
+                                                                                <rect key="frame" x="0.0" y="81" width="41.5" height="20.5"/>
+                                                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTk-8z-tkT">
+                                                                                <rect key="frame" x="0.0" y="121.5" width="41.5" height="20.5"/>
+                                                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWA-II-TPu">
+                                                                                <rect key="frame" x="0.0" y="162" width="41.5" height="20.5"/>
+                                                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2q-lY-Dbi">
+                                                                                <rect key="frame" x="0.0" y="202.5" width="41.5" height="20.5"/>
+                                                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIR-x0-wX2">
+                                                                                <rect key="frame" x="0.0" y="243" width="41.5" height="20.5"/>
+                                                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVD-IP-9Ow">
+                                                                                <rect key="frame" x="0.0" y="283.5" width="41.5" height="20.5"/>
+                                                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0mF-V9-84d">
-                                                        <rect key="frame" x="0.0" y="570.5" width="69.5" height="49"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0mF-V9-84d">
+                                                        <rect key="frame" x="0.0" y="586" width="82" height="59.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主な装備" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="std-St-JyG">
-                                                                <rect key="frame" x="0.0" y="0.0" width="69.5" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="82" height="24"/>
                                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHc-RZ-5Ul">
-                                                                <rect key="frame" x="0.0" y="28.5" width="41.5" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHc-RZ-5Ul">
+                                                                <rect key="frame" x="0.0" y="39" width="41.5" height="20.5"/>
                                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -492,18 +497,18 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q5L-ww-Lyg">
-                                                        <rect key="frame" x="0.0" y="658.5" width="69.5" height="69"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Q5L-ww-Lyg">
+                                                        <rect key="frame" x="0.0" y="695.5" width="85.5" height="61"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主な実績" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEt-Bc-noH">
-                                                                <rect key="frame" x="0.0" y="0.0" width="69.5" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="85.5" height="25.5"/>
                                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GT6-zC-uuc">
-                                                                <rect key="frame" x="0.0" y="48.5" width="41.5" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="40.5" width="41.5" height="20.5"/>
                                                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -617,61 +622,81 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jv3-qh-oiu">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hw3-Bg-Pm7">
-                                                <rect key="frame" x="64" y="61" width="286" height="221"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
-                                                    <string key="title">艦隊最強の盾！
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="N20-OA-agw">
+                                                <rect key="frame" x="20" y="20" width="374" height="720"/>
+                                                <subviews>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hw3-Bg-Pm7">
+                                                        <rect key="frame" x="53.5" y="0.0" width="267" height="150"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Hw3-Bg-Pm7" secondAttribute="height" multiplier="16:9" id="GJp-7l-oz2"/>
+                                                            <constraint firstAttribute="height" constant="150" id="v7E-uq-eUu"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="DDG">
+                                                            <string key="title">艦隊最強の盾！
 イージス艦！（DDG）</string>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="ButtonForDDG:" destination="NTj-uF-Ln8" eventType="touchUpInside" id="0Dm-U3-X4Y"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZ5-pD-FQq">
-                                                <rect key="frame" x="64" y="368" width="286" height="221"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
-                                                    <string key="title">艦隊の主力！
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="ButtonForDDG:" destination="NTj-uF-Ln8" eventType="touchUpInside" id="0Dm-U3-X4Y"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZ5-pD-FQq">
+                                                        <rect key="frame" x="53.5" y="190" width="267" height="150"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="WZ5-pD-FQq" secondAttribute="height" multiplier="16:9" id="H1j-Du-UKY"/>
+                                                            <constraint firstAttribute="height" constant="150" id="HrI-G8-mtO"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="DD">
+                                                            <string key="title">艦隊の主力！
 汎用護衛艦！（DD）</string>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="ButtonForDD:" destination="NTj-uF-Ln8" eventType="touchUpInside" id="zS0-a4-ahe"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAH-cC-qQs">
-                                                <rect key="frame" x="64" y="664" width="286" height="221"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
-                                                    <string key="title">海上の航空基地！
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="ButtonForDD:" destination="NTj-uF-Ln8" eventType="touchUpInside" id="zS0-a4-ahe"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAH-cC-qQs">
+                                                        <rect key="frame" x="53.5" y="380" width="267" height="150"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="mAH-cC-qQs" secondAttribute="height" multiplier="16:9" id="DnO-hy-pep"/>
+                                                            <constraint firstAttribute="height" constant="150" id="fVB-qH-qMm"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="DDH">
+                                                            <string key="title">海上の航空基地！
 ヘリコプター搭載護衛艦！（DDH）</string>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="ButtonForDDH:" destination="NTj-uF-Ln8" eventType="touchUpInside" id="JAv-aR-eoe"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmQ-Ob-qUm">
-                                                <rect key="frame" x="64" y="967" width="286" height="221"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
-                                                    <string key="title">近海・沿岸を守る護衛艦！
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="ButtonForDDH:" destination="NTj-uF-Ln8" eventType="touchUpInside" id="JAv-aR-eoe"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmQ-Ob-qUm">
+                                                        <rect key="frame" x="53.5" y="570" width="267" height="150"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="150" id="XUD-Vn-eXb"/>
+                                                            <constraint firstAttribute="width" secondItem="BmQ-Ob-qUm" secondAttribute="height" multiplier="16:9" id="ZL3-X9-wEs"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="DE">
+                                                            <string key="title">近海・沿岸を守る護衛艦！
 あぶくま型護衛艦！（DE）</string>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="ButtonForDE:" destination="NTj-uF-Ln8" eventType="touchUpInside" id="882-T5-Ka5"/>
-                                                </connections>
-                                            </button>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="ButtonForDE:" destination="NTj-uF-Ln8" eventType="touchUpInside" id="882-T5-Ka5"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1300" id="9hO-Ef-qlO"/>
+                                            <constraint firstAttribute="trailing" secondItem="N20-OA-agw" secondAttribute="trailing" constant="20" id="Ls4-sp-bZH"/>
+                                            <constraint firstItem="N20-OA-agw" firstAttribute="top" secondItem="Jv3-qh-oiu" secondAttribute="top" constant="20" id="Y8M-dh-ZCh"/>
+                                            <constraint firstItem="N20-OA-agw" firstAttribute="leading" secondItem="Jv3-qh-oiu" secondAttribute="leading" constant="20" id="x1y-ed-vsY"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -769,8 +794,17 @@
         </scene>
     </scenes>
     <resources>
+        <image name="DD" width="1920" height="1080"/>
+        <image name="DDG" width="1920" height="1080"/>
+        <image name="DDH" width="1920" height="1080"/>
+        <image name="DE" width="1920" height="1080"/>
+        <image name="佐世保" width="1920" height="1080"/>
+        <image name="呉" width="1920" height="1080"/>
+        <image name="大湊" width="1920" height="1080"/>
+        <image name="横須賀" width="1920" height="1080"/>
         <image name="母港（所在地）から" width="1920" height="1080"/>
         <image name="番号・名前 " width="1920" height="1080"/>
+        <image name="舞鶴" width="1920" height="1080"/>
         <image name="艦種（種類）から" width="1920" height="1080"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
