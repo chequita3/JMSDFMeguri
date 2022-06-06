@@ -21,11 +21,11 @@ class AffiliatedShipCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        contentView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        contentView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        contentView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+//        contentView.translatesAutoresizingMaskIntoConstraints = false
+//        contentView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+//        contentView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+//        contentView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+//        contentView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
     }
     
     func setup(image: String, number: Int, name: String) {
@@ -35,10 +35,12 @@ class AffiliatedShipCollectionViewCell: UICollectionViewCell {
             self.shipImageView.sd_setImage(with: loadDBModel.downloadURL, completed: nil)
         })
         
-        
-        
+        shipImageView.layer.cornerRadius = 8.0
         shipNumberLabel.text = String(number)
         shipNameLabel.text = name
+        
+        clipsToBounds = true
+        layer.cornerRadius = 8.0
     }
     
 }

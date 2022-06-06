@@ -24,16 +24,7 @@ struct DataSet {
     let displacement:String
     let capacity:String
     let topSpeed:String
-    let equipments1:String
-    let equipments2:String
-    let equipments3:String
-    let equipments4:String
-    let equipments5:String
-    let equipments6:String
-    let equipments7:String
-    let equipments8:String
-    let equipments9:String
-    let equipments10:String
+    let equipment:String
     let career:String
     let toWiki:String
 }

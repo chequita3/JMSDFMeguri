@@ -8,18 +8,28 @@
 import UIKit
 import FirebaseStorage
 import SDWebImage
+import SwiftUI
 
 class FirstViewController: UIViewController {
     
     
 
+    @IBOutlet weak var numAndNameButton: UIButton!
+    @IBOutlet weak var homeportButton: UIButton!
+    @IBOutlet weak var typeButton: UIButton!
     
+    var buttonSetting = ButtonSetting()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        // Do any additional setup after loading the view.
+        self.view.addBackground(name: "背景1 (1)")
+
+        buttonSetting.settingButton(passedButton: numAndNameButton)
+        buttonSetting.settingButton(passedButton: homeportButton)
+        buttonSetting.settingButton(passedButton: typeButton)
+
     }
 
     

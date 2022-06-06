@@ -21,52 +21,63 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="r4I-Mp-zZj">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="767.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="665"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="護衛艦を見つけてみましょう!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hl9-4v-sbH">
-                                                <rect key="frame" x="52" y="0.0" width="310.5" height="27.5"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OdN-Ix-T6K">
-                                                <rect key="frame" x="20" y="77.5" width="374" height="690"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ri4-9o-OQ3">
+                                                <rect key="frame" x="53.5" y="0.0" width="307.5" height="51"/>
                                                 <subviews>
-                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nl-2k-xzH">
-                                                        <rect key="frame" x="0.5" y="0.0" width="373" height="210"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the JapanDefenceShip !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hl9-4v-sbH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="307.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="護衛艦を見つけてみよう！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRK-fZ-EFC">
+                                                        <rect key="frame" x="43.5" y="29.5" width="220.5" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OdN-Ix-T6K">
+                                                <rect key="frame" x="20" y="101" width="374" height="564"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nl-2k-xzH">
+                                                        <rect key="frame" x="37" y="0.0" width="300" height="168"/>
                                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="210" id="SVp-uy-oLa"/>
-                                                            <constraint firstAttribute="width" secondItem="9nl-2k-xzH" secondAttribute="height" multiplier="16:9" id="i6x-gp-c0x"/>
+                                                            <constraint firstAttribute="height" constant="168" id="SVp-uy-oLa"/>
+                                                            <constraint firstAttribute="width" constant="300" id="Zs1-ue-NYd"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="番号、名前から探してみる" image="番号・名前 "/>
+                                                        <state key="normal" title="番号、名前から探してみる" image="番号・名前から探す (1)"/>
                                                         <connections>
                                                             <action selector="toSearchVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bt6-dv-b88"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxI-oS-uLJ">
-                                                        <rect key="frame" x="0.5" y="240" width="373" height="210"/>
+                                                        <rect key="frame" x="37" y="198" width="300" height="168"/>
                                                         <color key="backgroundColor" systemColor="systemTealColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="210" id="Bu1-lZ-9bO"/>
-                                                            <constraint firstAttribute="width" secondItem="kxI-oS-uLJ" secondAttribute="height" multiplier="16:9" id="cGN-24-Sd0"/>
+                                                            <constraint firstAttribute="height" constant="168" id="Bu1-lZ-9bO"/>
+                                                            <constraint firstAttribute="width" constant="300" id="Hyg-bg-pJm"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="母港から探してみる" image="母港（所在地）から"/>
+                                                        <state key="normal" title="母港から探してみる" image="母港（所在地） から探す (1)"/>
                                                         <connections>
                                                             <action selector="toSelectHPVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sPG-gt-j8R"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8om-9J-A0y">
-                                                        <rect key="frame" x="0.5" y="480" width="373" height="210"/>
+                                                        <rect key="frame" x="37" y="396" width="300" height="168"/>
                                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="210" id="Xdk-sK-UvX"/>
-                                                            <constraint firstAttribute="width" secondItem="8om-9J-A0y" secondAttribute="height" multiplier="16:9" id="anW-00-nTb"/>
+                                                            <constraint firstAttribute="width" constant="300" id="Ck6-ex-Xs3"/>
+                                                            <constraint firstAttribute="height" constant="168" id="Xdk-sK-UvX"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="種類から探してみる" image="艦種（種類）から"/>
+                                                        <state key="normal" title="種類から探してみる" image="艦の種類から探す"/>
                                                         <connections>
                                                             <action selector="toSelectTypeVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g8r-Bp-58D"/>
                                                         </connections>
@@ -92,7 +103,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="linkColor"/>
+                        <color key="backgroundColor" red="0.88326811717094234" green="0.88289481642915402" blue="0.88941545055267657" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bib-st-cQw" secondAttribute="trailing" id="4tJ-t4-ADa"/>
                             <constraint firstItem="bib-st-cQw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Z77-Qj-ogK"/>
@@ -101,6 +112,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ig5-sF-JVg"/>
+                    <connections>
+                        <outlet property="homeportButton" destination="kxI-oS-uLJ" id="EIB-ao-veL"/>
+                        <outlet property="numAndNameButton" destination="9nl-2k-xzH" id="wmY-Vf-tyL"/>
+                        <outlet property="typeButton" destination="8om-9J-A0y" id="jLJ-G2-LET"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,73 +133,73 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEM-ar-90m">
                                 <rect key="frame" x="0.0" y="44" width="414" height="1122"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEW-GA-CUV">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EEW-GA-CUV">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="KGL-V0-p1j">
-                                                <rect key="frame" x="20" y="40" width="374" height="910"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KGL-V0-p1j">
+                                                <rect key="frame" x="20" y="40" width="374" height="680"/>
                                                 <subviews>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzt-c0-7Xd">
-                                                        <rect key="frame" x="53.5" y="0.0" width="267" height="150"/>
+                                                        <rect key="frame" x="37" y="0.0" width="300" height="120"/>
                                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="150" id="CcG-Kp-3wt"/>
-                                                            <constraint firstAttribute="width" secondItem="Qzt-c0-7Xd" secondAttribute="height" multiplier="16:9" id="eAu-ZW-Klm"/>
+                                                            <constraint firstAttribute="width" constant="300" id="2Ej-wv-U6T"/>
+                                                            <constraint firstAttribute="height" constant="120" id="CcG-Kp-3wt"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="大湊（青森県）" image="大湊"/>
+                                                        <state key="normal" title="大湊（青森県）" image="青森"/>
                                                         <connections>
                                                             <action selector="ominato:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="Jfq-Th-E3u"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gC8-8U-4w8">
-                                                        <rect key="frame" x="53.5" y="190" width="267" height="150"/>
+                                                        <rect key="frame" x="37" y="140" width="300" height="120"/>
                                                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="gC8-8U-4w8" secondAttribute="height" multiplier="16:9" id="Tjh-sJ-ZsM"/>
-                                                            <constraint firstAttribute="height" constant="150" id="bPk-1B-kuo"/>
+                                                            <constraint firstAttribute="width" constant="300" id="9VS-yX-TAj"/>
+                                                            <constraint firstAttribute="height" constant="120" id="bPk-1B-kuo"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="横須賀（神奈川県）" image="横須賀"/>
+                                                        <state key="normal" title="横須賀（神奈川県）" image="神奈川"/>
                                                         <connections>
                                                             <action selector="yokosuka:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="n1M-e6-g6H"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2Z-zW-2sM">
-                                                        <rect key="frame" x="53.5" y="380" width="267" height="150"/>
+                                                        <rect key="frame" x="37" y="280" width="300" height="120"/>
                                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="q2Z-zW-2sM" secondAttribute="height" multiplier="16:9" id="NzU-S2-5PW"/>
-                                                            <constraint firstAttribute="height" constant="150" id="YuY-we-5WS"/>
+                                                            <constraint firstAttribute="height" constant="120" id="YuY-we-5WS"/>
+                                                            <constraint firstAttribute="width" constant="300" id="qs0-nA-L6Z"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="舞鶴（京都府）" image="舞鶴"/>
+                                                        <state key="normal" title="舞鶴（京都府）" image="京都"/>
                                                         <connections>
                                                             <action selector="maizuru:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="dgI-Kv-Dhp"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnT-vN-lkb">
-                                                        <rect key="frame" x="53.5" y="570" width="267" height="150"/>
+                                                        <rect key="frame" x="37" y="420" width="300" height="120"/>
                                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="FnT-vN-lkb" secondAttribute="height" multiplier="16:9" id="bsr-OI-jkl"/>
-                                                            <constraint firstAttribute="height" constant="150" id="kxe-ef-qGA"/>
+                                                            <constraint firstAttribute="width" constant="300" id="8iN-1p-fjL"/>
+                                                            <constraint firstAttribute="height" constant="120" id="kxe-ef-qGA"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="呉（広島県）" image="呉"/>
+                                                        <state key="normal" title="呉（広島県）" image="広島"/>
                                                         <connections>
                                                             <action selector="kure:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="1Nk-E6-GoX"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TE0-jb-mPC">
-                                                        <rect key="frame" x="53.5" y="760" width="267" height="150"/>
+                                                        <rect key="frame" x="37" y="560" width="300" height="120"/>
                                                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="TE0-jb-mPC" secondAttribute="height" multiplier="16:9" id="avj-f0-kfW"/>
-                                                            <constraint firstAttribute="height" constant="150" id="tEs-oX-Zg8"/>
+                                                            <constraint firstAttribute="width" constant="300" id="Nha-Tz-M8z"/>
+                                                            <constraint firstAttribute="height" constant="120" id="tEs-oX-Zg8"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="佐世保（長崎県）" image="佐世保"/>
+                                                        <state key="normal" title="佐世保（長崎県）" image="長崎"/>
                                                         <connections>
                                                             <action selector="sasebo:" destination="CxX-aV-QQZ" eventType="touchUpInside" id="V2j-Ih-wQo"/>
                                                         </connections>
@@ -212,7 +228,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="B4e-cl-FXL"/>
-                        <color key="backgroundColor" systemColor="tintColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZEM-ar-90m" firstAttribute="trailing" secondItem="B4e-cl-FXL" secondAttribute="trailing" id="2Vf-6N-9Lp"/>
                             <constraint firstItem="ZEM-ar-90m" firstAttribute="top" secondItem="B4e-cl-FXL" secondAttribute="top" id="3ic-3M-2N0"/>
@@ -222,6 +238,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="母港を選んでみましょう！" id="f5o-07-JOC"/>
                     <size key="freeformSize" width="414" height="1200"/>
+                    <connections>
+                        <outlet property="kureButton" destination="FnT-vN-lkb" id="TeE-Gj-mk7"/>
+                        <outlet property="maizuruButton" destination="q2Z-zW-2sM" id="scp-zd-vUp"/>
+                        <outlet property="ominatoButton" destination="Qzt-c0-7Xd" id="Adw-xC-OPc"/>
+                        <outlet property="saseboButton" destination="TE0-jb-mPC" id="i27-Xz-uo8"/>
+                        <outlet property="yokosukaButton" destination="gC8-8U-4w8" id="EnL-Zm-35G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="elf-tZ-MjE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -531,7 +554,7 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="9aV-hN-QX3" firstAttribute="leading" secondItem="AqB-mg-RCg" secondAttribute="leading" id="40A-NF-3cW"/>
                                             <constraint firstItem="n8F-Ja-iht" firstAttribute="top" secondItem="9aV-hN-QX3" secondAttribute="bottom" constant="8" id="E65-La-WV4"/>
@@ -622,14 +645,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jv3-qh-oiu">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="N20-OA-agw">
-                                                <rect key="frame" x="20" y="20" width="374" height="720"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="N20-OA-agw">
+                                                <rect key="frame" x="20" y="20" width="374" height="690"/>
                                                 <subviews>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hw3-Bg-Pm7">
-                                                        <rect key="frame" x="53.5" y="0.0" width="267" height="150"/>
+                                                        <rect key="frame" x="37" y="0.0" width="300" height="150"/>
                                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="Hw3-Bg-Pm7" secondAttribute="height" multiplier="16:9" id="GJp-7l-oz2"/>
+                                                            <constraint firstAttribute="width" constant="300" id="a25-Ta-U5P"/>
                                                             <constraint firstAttribute="height" constant="150" id="v7E-uq-eUu"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -642,11 +665,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZ5-pD-FQq">
-                                                        <rect key="frame" x="53.5" y="190" width="267" height="150"/>
+                                                        <rect key="frame" x="37" y="180" width="300" height="150"/>
                                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="WZ5-pD-FQq" secondAttribute="height" multiplier="16:9" id="H1j-Du-UKY"/>
                                                             <constraint firstAttribute="height" constant="150" id="HrI-G8-mtO"/>
+                                                            <constraint firstAttribute="width" constant="300" id="he8-Mc-4RM"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="DD">
@@ -658,11 +681,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAH-cC-qQs">
-                                                        <rect key="frame" x="53.5" y="380" width="267" height="150"/>
+                                                        <rect key="frame" x="37" y="360" width="300" height="150"/>
                                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="mAH-cC-qQs" secondAttribute="height" multiplier="16:9" id="DnO-hy-pep"/>
                                                             <constraint firstAttribute="height" constant="150" id="fVB-qH-qMm"/>
+                                                            <constraint firstAttribute="width" constant="300" id="xkE-4f-KgJ"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="DDH">
@@ -674,11 +697,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmQ-Ob-qUm">
-                                                        <rect key="frame" x="53.5" y="570" width="267" height="150"/>
+                                                        <rect key="frame" x="37" y="540" width="300" height="150"/>
                                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="150" id="XUD-Vn-eXb"/>
-                                                            <constraint firstAttribute="width" secondItem="BmQ-Ob-qUm" secondAttribute="height" multiplier="16:9" id="ZL3-X9-wEs"/>
+                                                            <constraint firstAttribute="width" constant="300" id="sKQ-kD-RHT"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="DE">
@@ -722,6 +745,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="種類から探してみましょう！" id="7VC-DI-mqh"/>
                     <size key="freeformSize" width="414" height="1400"/>
+                    <connections>
+                        <outlet property="DDButton" destination="WZ5-pD-FQq" id="n6w-of-NA3"/>
+                        <outlet property="DDGButton" destination="Hw3-Bg-Pm7" id="Gu6-tI-upE"/>
+                        <outlet property="DDHButton" destination="mAH-cC-qQs" id="SUC-XY-51c"/>
+                        <outlet property="DEButton" destination="BmQ-Ob-qUm" id="EAc-RK-MHX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMh-cH-D6E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -794,21 +823,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="DD" width="1920" height="1080"/>
-        <image name="DDG" width="1920" height="1080"/>
-        <image name="DDH" width="1920" height="1080"/>
-        <image name="DE" width="1920" height="1080"/>
-        <image name="佐世保" width="1920" height="1080"/>
-        <image name="呉" width="1920" height="1080"/>
-        <image name="大湊" width="1920" height="1080"/>
-        <image name="横須賀" width="1920" height="1080"/>
-        <image name="母港（所在地）から" width="1920" height="1080"/>
-        <image name="番号・名前 " width="1920" height="1080"/>
-        <image name="舞鶴" width="1920" height="1080"/>
-        <image name="艦種（種類）から" width="1920" height="1080"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="DD" width="1920" height="640"/>
+        <image name="DDG" width="1920" height="640"/>
+        <image name="DDH" width="1920" height="640"/>
+        <image name="DE" width="1920" height="640"/>
+        <image name="京都" width="1920" height="640"/>
+        <image name="広島" width="1920" height="640"/>
+        <image name="母港（所在地） から探す (1)" width="1920" height="640"/>
+        <image name="番号・名前から探す (1)" width="1920" height="640"/>
+        <image name="神奈川" width="1920" height="640"/>
+        <image name="艦の種類から探す" width="1920" height="640"/>
+        <image name="長崎" width="1920" height="640"/>
+        <image name="青森" width="1920" height="640"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -823,9 +849,6 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

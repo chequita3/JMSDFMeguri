@@ -9,35 +9,32 @@ import UIKit
 import FirebaseStorage
 import SDWebImage
 
-class SelectTypeViewController: UIViewController,loadOKDelegate {
+class SelectTypeViewController: UIViewController {
+    
+    @IBOutlet weak var DDGButton: UIButton!
+    @IBOutlet weak var DDButton: UIButton!
+    @IBOutlet weak var DDHButton: UIButton!
+    @IBOutlet weak var DEButton: UIButton!
     
     var loadDBModel = LoadDBModel()
-
+    var buttonSetting = ButtonSetting()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadDBModel.loadOKDelegate = self
+        loadDBModel.loadContents()
+        
+        self.view.addBackground(name: "背景（朝日）")
+        buttonSetting.settingButton(passedButton: DDGButton)
+        buttonSetting.settingButton(passedButton: DDButton)
+        buttonSetting.settingButton(passedButton: DDHButton)
+        buttonSetting.settingButton(passedButton: DEButton)
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
 
-        //無効にする
-        view.window?.beginIgnoringInteractionEvents()
 
-        loadDBModel.loadContents()
-        
-    }
 
-    func loadOK(check: Int) {
-        if check == 1 {
-            //有効にする
-            view.window?.endIgnoringInteractionEvents()
-            
-        }
-    }
     
     
     @IBAction func ButtonForDDG(_ sender: Any) {

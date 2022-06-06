@@ -37,7 +37,7 @@ class SortedShipViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         filteredShipsArray = shipsArray.filter{ data in
-            return data.type.contains(shipType) }
+            return data.type == self.shipType}
 
 
     }

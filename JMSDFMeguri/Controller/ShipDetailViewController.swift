@@ -23,7 +23,7 @@ class ShipDetailViewController: UIViewController {
     @IBOutlet weak var displacementLabel: UILabel!
     @IBOutlet weak var capacityLabel: UILabel!
     @IBOutlet weak var topspeedLabel: UILabel!
-    @IBOutlet weak var equipments1Label: UILabel!
+    @IBOutlet weak var equipmentLabel: UILabel!
     @IBOutlet weak var careerLabel: UILabel!
     
  
@@ -56,7 +56,7 @@ class ShipDetailViewController: UIViewController {
         self.displacementLabel.text = filteredShipsArray[0].displacement
         self.capacityLabel.text = filteredShipsArray[0].capacity
         self.topspeedLabel.text = filteredShipsArray[0].topSpeed
-//        self.equipments1Label
+        self.equipmentLabel.text = filteredShipsArray[0].equipment
         self.careerLabel.text = filteredShipsArray[0].career
     }
     

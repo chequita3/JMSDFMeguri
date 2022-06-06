@@ -7,42 +7,39 @@
 
 import UIKit
 
-class SelectHPViewController: UIViewController,loadOKDelegate {
+class SelectHPViewController: UIViewController {
     
-    
-
+    @IBOutlet weak var ominatoButton: UIButton!
+    @IBOutlet weak var yokosukaButton: UIButton!
+    @IBOutlet weak var maizuruButton: UIButton!
+    @IBOutlet weak var kureButton: UIButton!
+    @IBOutlet weak var saseboButton: UIButton!
     
     var loadDBModel = LoadDBModel()
-    
+    var buttonSetting = ButtonSetting()
+    var shadowView1 = UIView()
+    var shadowView2 = UIView()
+    var shadowView3 = UIView()
+    var shadowView4 = UIView()
+    var shadowView5 = UIView()
+
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadDBModel.loadOKDelegate = self
- 
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-
-        //無効にする
-        view.window?.beginIgnoringInteractionEvents()
-        
-        
-        
+        self.view.addBackground(name: "背景（夕方）")
         loadDBModel.loadContents()
-        
+
+        buttonSetting.settingButton(passedButton: ominatoButton)
+        buttonSetting.settingButton(passedButton: yokosukaButton)
+        buttonSetting.settingButton(passedButton: maizuruButton)
+        buttonSetting.settingButton(passedButton: kureButton)
+        buttonSetting.settingButton(passedButton: saseboButton)
     }
     
-    func loadOK(check: Int) {
-        if check == 1 {
-            //有効にする
-            view.window?.endIgnoringInteractionEvents()
-            
-        }
-    }
+
+
     
     @IBAction func ominato(_ sender: Any) {
         let AffiliatedShipVC = self.storyboard?.instantiateViewController(identifier: "AffiliatedShipVC") as! AffiliatedShipViewController
@@ -87,18 +84,7 @@ class SelectHPViewController: UIViewController,loadOKDelegate {
 }
 
 
-extension UIWindow {
-    func beginIgnoringInteractionEvents() {
-        let overlayView = UIView(frame: bounds)
-        overlayView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        overlayView.tag = 10000
-        addSubview(overlayView)
-    }
 
-    func endIgnoringInteractionEvents() {
-        viewWithTag(10000)?.removeFromSuperview()
-    }
-}
 
 
         
