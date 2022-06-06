@@ -58,6 +58,8 @@ class ShipDetailViewController: UIViewController {
         self.topspeedLabel.text = filteredShipsArray[0].topSpeed
         self.equipmentLabel.text = filteredShipsArray[0].equipment
         self.careerLabel.text = filteredShipsArray[0].career
+        
+        
     }
     
     func filerdData(){

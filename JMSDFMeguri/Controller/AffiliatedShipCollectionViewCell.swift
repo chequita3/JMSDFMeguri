@@ -35,12 +35,14 @@ class AffiliatedShipCollectionViewCell: UICollectionViewCell {
             self.shipImageView.sd_setImage(with: loadDBModel.downloadURL, completed: nil)
         })
         
-        shipImageView.layer.cornerRadius = 8.0
+
         shipNumberLabel.text = String(number)
         shipNameLabel.text = name
         
         clipsToBounds = true
         layer.cornerRadius = 8.0
+        layer.borderColor = UIColor.black.cgColor
+        layer.borderWidth = 1
     }
     
 }
