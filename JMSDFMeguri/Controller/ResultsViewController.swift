@@ -9,8 +9,7 @@ import UIKit
  
 class ResultsViewController: UITableViewController {
 
-    
-
+    weak var searchViewController: SearchViewController?
     
     var dataList: [Ships] = [] {
         didSet {
@@ -58,7 +57,8 @@ class ResultsViewController: UITableViewController {
         shipDetailVC.shipName = self.dataList[indexPath.row].name
         shipDetailVC.shipsArray = loadDBModel.dataSets
         
-        self.present(shipDetailVC, animated: true, completion: nil)
+        self.searchViewController?.navigationController?.pushViewController(shipDetailVC, animated: true)
+
     }
 
  

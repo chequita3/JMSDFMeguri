@@ -34,6 +34,7 @@ class SearchViewController: UIViewController,loadOKDelegate,UISearchBarDelegate 
         
         definesPresentationContext = true
         resultsController = ResultsViewController()
+        resultsController.searchViewController = self
         
         searchController = UISearchController(searchResultsController: resultsController)
         searchController.obscuresBackgroundDuringPresentation = true
@@ -145,6 +146,9 @@ extension SearchViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let shipDetailVC = self.storyboard?.instantiateViewController(identifier: "shipDetailVC") as! ShipDetailViewController
+        
+        shipDetailVC.shipName = self.allShipArray[indexPath.row].name
+        shipDetailVC.shipsArray = loadDBModel.dataSets
         
         navigationController?.pushViewController(shipDetailVC, animated: true)
     }

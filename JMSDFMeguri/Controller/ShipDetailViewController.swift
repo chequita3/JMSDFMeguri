@@ -8,6 +8,7 @@
 import UIKit
 import SDWebImage
 
+
 class ShipDetailViewController: UIViewController {
     
     
@@ -24,7 +25,6 @@ class ShipDetailViewController: UIViewController {
     @IBOutlet weak var capacityLabel: UILabel!
     @IBOutlet weak var topspeedLabel: UILabel!
     @IBOutlet weak var equipmentLabel: UILabel!
-    @IBOutlet weak var careerLabel: UILabel!
     
  
     var loadDBModel = LoadDBModel()
@@ -33,6 +33,10 @@ class ShipDetailViewController: UIViewController {
     var filteredShipsArray = [DataSet]()
 
     @IBOutlet weak var shipNameLabel: UILabel!
+    
+    @IBOutlet weak var careerTableView: UITableView!
+    var careerArray = [String]()
+    var yearAndEventArray = [[String]]()
     
     
     override func viewDidLoad() {
@@ -57,10 +61,28 @@ class ShipDetailViewController: UIViewController {
         self.capacityLabel.text = filteredShipsArray[0].capacity
         self.topspeedLabel.text = filteredShipsArray[0].topSpeed
         self.equipmentLabel.text = filteredShipsArray[0].equipment
-        self.careerLabel.text = filteredShipsArray[0].career
+        
+        self.careerArray = filteredShipsArray[0].career.lines
+        self.yearAndEventArray = careerArray.map {
+            $0.components(separatedBy: "年")
+        }
+        
+        
+        careerTableView.estimatedRowHeight = 100
+        careerTableView.rowHeight = UITableView.automaticDimension
+        
+        careerTableView.dataSource = self
+        careerTableView.delegate = self
+        
+        let nib = UINib(nibName: "CareerTableViewCell", bundle: nil)
+        careerTableView.register(nib, forCellReuseIdentifier: "CareerTableViewCell")
+        
+
         
         
     }
+    
+
     
     func filerdData(){
         self.filteredShipsArray = self.shipsArray.filter ({
@@ -78,3 +100,27 @@ class ShipDetailViewController: UIViewController {
 
  
 }
+
+extension ShipDetailViewController: UITableViewDataSource,UITableViewDelegate {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return careerArray.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = careerTableView.dequeueReusableCell(withIdentifier: "CareerTableViewCell", for: indexPath) as! CareerTableViewCell
+        
+        cell.setup(year: yearAndEventArray[indexPath.row][0]+"年", event: yearAndEventArray[indexPath.row][1])
+
+        return cell
+    }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        tableView.estimatedRowHeight = 100
+//            return UITableView.automaticDimension
+//        }
+    
+}
+
+
