@@ -111,13 +111,20 @@ extension ShipDetailViewController: UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = careerTableView.dequeueReusableCell(withIdentifier: "CareerTableViewCell", for: indexPath) as! CareerTableViewCell
         
-        cell.setup(year: yearAndEventArray[indexPath.row][0]+"年", event: yearAndEventArray[indexPath.row][1])
+        var str = yearAndEventArray[indexPath.row][1]
+        if let i = str.firstIndex(of: "　"){
+            str.remove(at: i)
+        }
+        
+        print(str)
+        
+        cell.setup(year: yearAndEventArray[indexPath.row][0]+"年", event: str)
 
         return cell
     }
     
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        tableView.estimatedRowHeight = 100
+//        careerTableView.estimatedRowHeight = 100
 //            return UITableView.automaticDimension
 //        }
     

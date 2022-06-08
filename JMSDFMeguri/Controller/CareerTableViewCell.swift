@@ -25,8 +25,16 @@ class CareerTableViewCell: UITableViewCell {
     }
     
     func setup(year: String, event: String) {
+        
         yearLabel.text = year
         eventLabel.text = event
+        
+        yearLabel.numberOfLines = 0
+        eventLabel.numberOfLines = 0
+        
+        yearLabel.sizeToFit()
+        eventLabel.sizeToFit()
+        
     }
 
     
