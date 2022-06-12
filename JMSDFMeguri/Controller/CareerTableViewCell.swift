@@ -29,11 +29,10 @@ class CareerTableViewCell: UITableViewCell {
         yearLabel.text = year
         eventLabel.text = event
         
-        yearLabel.numberOfLines = 0
-        eventLabel.numberOfLines = 0
-        
         yearLabel.sizeToFit()
         eventLabel.sizeToFit()
+        
+
         
     }
 

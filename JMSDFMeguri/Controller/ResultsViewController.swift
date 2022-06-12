@@ -28,6 +28,7 @@ class ResultsViewController: UITableViewController {
         
         let nib = UINib(nibName: "TableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "TableViewCell")
+        
     }
  
  
@@ -42,6 +43,7 @@ class ResultsViewController: UITableViewController {
         
         cell.setup(number: dataList[indexPath.row].number, name: dataList[indexPath.row].name)
         
+        cell.contentView.backgroundColor = UIColor.white
         
         return cell
     }

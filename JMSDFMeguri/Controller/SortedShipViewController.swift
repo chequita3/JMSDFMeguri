@@ -25,6 +25,7 @@ class SortedShipViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
 
+        collectionView.backgroundColor = .white
         collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         let nib = UINib(nibName: "AffiliatedShipCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "AffiliatedShipCollectionViewCell")

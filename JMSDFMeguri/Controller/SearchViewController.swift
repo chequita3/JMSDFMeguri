@@ -49,7 +49,8 @@ class SearchViewController: UIViewController,loadOKDelegate,UISearchBarDelegate 
         
         loadDBModel.loadOKDelegate = self
         tableView.delegate = self
-    }
+        
+            }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -139,6 +140,7 @@ extension SearchViewController: UITableViewDelegate,UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
         
         cell.setup(number: allShipArray[indexPath.row].number, name: allShipArray[indexPath.row].name)
+        cell.contentView.backgroundColor = UIColor.white
         
         return cell
     }

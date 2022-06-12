@@ -24,7 +24,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.addBackground(name: "背景1 (1)")
+        self.view.addBackground(name: "背景（昼）")
 
         buttonSetting.settingButton(passedButton: numAndNameButton)
         buttonSetting.settingButton(passedButton: homeportButton)

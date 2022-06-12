@@ -16,44 +16,30 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="IP4-Ig-h23">
-                        <rect key="frame" x="5" y="0.0" width="310" height="44"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="none" minimumScaleFactor="0.5" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="k8z-b6-kgf">
-                                <rect key="frame" x="0.0" y="0.0" width="75" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="gKL-GR-hyF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" minimumScaleFactor="0.5" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="MP7-Yf-ds2">
-                                <rect key="frame" x="90" y="0.0" width="220" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="kur-oP-JFP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="k8z-b6-kgf">
+                        <rect key="frame" x="5" y="0.0" width="75" height="20.5"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="MP7-Yf-ds2" secondAttribute="trailing" id="FOt-RC-s6f"/>
-                            <constraint firstItem="MP7-Yf-ds2" firstAttribute="height" secondItem="k8z-b6-kgf" secondAttribute="height" id="Mq5-QQ-13M"/>
-                            <constraint firstItem="MP7-Yf-ds2" firstAttribute="leading" secondItem="k8z-b6-kgf" secondAttribute="trailing" constant="15" id="Yja-If-FJO"/>
-                            <constraint firstItem="MP7-Yf-ds2" firstAttribute="top" secondItem="IP4-Ig-h23" secondAttribute="top" id="avv-ZC-MG4"/>
-                            <constraint firstItem="k8z-b6-kgf" firstAttribute="leading" secondItem="IP4-Ig-h23" secondAttribute="leading" id="dsw-2L-rHv"/>
-                            <constraint firstItem="MP7-Yf-ds2" firstAttribute="leading" secondItem="k8z-b6-kgf" secondAttribute="trailing" constant="15" id="frq-MO-Kp0"/>
-                            <constraint firstItem="k8z-b6-kgf" firstAttribute="top" secondItem="IP4-Ig-h23" secondAttribute="top" id="oGL-E1-yxM"/>
+                            <constraint firstAttribute="width" constant="75" id="aQJ-mj-Ohm"/>
                         </constraints>
-                    </stackView>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="MP7-Yf-ds2">
+                        <rect key="frame" x="95" y="0.0" width="220" height="39"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="IP4-Ig-h23" secondAttribute="bottom" id="3QW-ck-1wi"/>
-                    <constraint firstItem="IP4-Ig-h23" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cEU-l6-xxc"/>
-                    <constraint firstItem="IP4-Ig-h23" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="qH6-a2-iSB"/>
-                    <constraint firstAttribute="trailing" secondItem="IP4-Ig-h23" secondAttribute="trailing" constant="5" id="y2w-rz-w9E"/>
+                    <constraint firstItem="MP7-Yf-ds2" firstAttribute="leading" secondItem="k8z-b6-kgf" secondAttribute="trailing" constant="15" id="1cp-lQ-r4Y"/>
+                    <constraint firstItem="MP7-Yf-ds2" firstAttribute="leading" secondItem="k8z-b6-kgf" secondAttribute="trailing" constant="15" id="AR2-zI-4ZL"/>
+                    <constraint firstItem="k8z-b6-kgf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="OUx-jG-ifV"/>
+                    <constraint firstAttribute="trailing" secondItem="MP7-Yf-ds2" secondAttribute="trailing" constant="5" id="fQI-I9-PcJ"/>
+                    <constraint firstItem="k8z-b6-kgf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="jfQ-Et-xpB"/>
+                    <constraint firstAttribute="bottom" secondItem="MP7-Yf-ds2" secondAttribute="bottom" constant="5" id="vjO-d3-URn"/>
+                    <constraint firstItem="MP7-Yf-ds2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="yrZ-k0-iuv"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

@@ -25,6 +25,7 @@ class ShipDetailViewController: UIViewController {
     @IBOutlet weak var capacityLabel: UILabel!
     @IBOutlet weak var topspeedLabel: UILabel!
     @IBOutlet weak var equipmentLabel: UILabel!
+    @IBOutlet weak var tableviewHight: NSLayoutConstraint!
     
  
     var loadDBModel = LoadDBModel()
@@ -63,16 +64,19 @@ class ShipDetailViewController: UIViewController {
         self.equipmentLabel.text = filteredShipsArray[0].equipment
         
         self.careerArray = filteredShipsArray[0].career.lines
+
         self.yearAndEventArray = careerArray.map {
             $0.components(separatedBy: "年")
         }
         
         
-        careerTableView.estimatedRowHeight = 100
-        careerTableView.rowHeight = UITableView.automaticDimension
-        
         careerTableView.dataSource = self
         careerTableView.delegate = self
+        
+
+        
+        careerTableView.separatorStyle = .none
+        careerTableView.backgroundColor = .white
         
         let nib = UINib(nibName: "CareerTableViewCell", bundle: nil)
         careerTableView.register(nib, forCellReuseIdentifier: "CareerTableViewCell")
@@ -82,6 +86,10 @@ class ShipDetailViewController: UIViewController {
         
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        tableviewHight.constant = CGFloat(careerTableView.contentSize.height)
+    }
 
     
     func filerdData(){
@@ -93,7 +101,15 @@ class ShipDetailViewController: UIViewController {
             return data.shipName == "\(self.shipName)"
         })
     }
-        
+    
+    
+    @IBAction func toWiki(_ sender: Any) {
+        let url = URL(string: filteredShipsArray[0].toWiki)!
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
+    }
+    
     
     
 
@@ -103,6 +119,7 @@ class ShipDetailViewController: UIViewController {
 
 extension ShipDetailViewController: UITableViewDataSource,UITableViewDelegate {
     
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return careerArray.count
@@ -119,14 +136,14 @@ extension ShipDetailViewController: UITableViewDataSource,UITableViewDelegate {
         print(str)
         
         cell.setup(year: yearAndEventArray[indexPath.row][0]+"年", event: str)
+        
+        cell.contentView.backgroundColor = UIColor.white
 
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        careerTableView.estimatedRowHeight = 100
-//            return UITableView.automaticDimension
-//        }
+
+
     
 }
 
