@@ -27,12 +27,12 @@ class ShipDetailViewController: UIViewController {
     @IBOutlet weak var equipmentLabel: UILabel!
     @IBOutlet weak var tableviewHight: NSLayoutConstraint!
     
- 
+    
     var loadDBModel = LoadDBModel()
     var shipName = String()
     var shipsArray = [DataSet]()
     var filteredShipsArray = [DataSet]()
-
+    
     @IBOutlet weak var shipNameLabel: UILabel!
     
     @IBOutlet weak var careerTableView: UITableView!
@@ -64,7 +64,7 @@ class ShipDetailViewController: UIViewController {
         self.equipmentLabel.text = filteredShipsArray[0].equipment
         
         self.careerArray = filteredShipsArray[0].career.lines
-
+        
         self.yearAndEventArray = careerArray.map {
             $0.components(separatedBy: "年")
         }
@@ -73,7 +73,7 @@ class ShipDetailViewController: UIViewController {
         careerTableView.dataSource = self
         careerTableView.delegate = self
         
-
+        
         
         careerTableView.separatorStyle = .none
         careerTableView.backgroundColor = .white
@@ -81,7 +81,7 @@ class ShipDetailViewController: UIViewController {
         let nib = UINib(nibName: "CareerTableViewCell", bundle: nil)
         careerTableView.register(nib, forCellReuseIdentifier: "CareerTableViewCell")
         
-
+        
         
         
     }
@@ -90,7 +90,7 @@ class ShipDetailViewController: UIViewController {
         super.viewWillLayoutSubviews()
         tableviewHight.constant = CGFloat(careerTableView.contentSize.height)
     }
-
+    
     
     func filerdData(){
         self.filteredShipsArray = self.shipsArray.filter ({
@@ -112,19 +112,19 @@ class ShipDetailViewController: UIViewController {
     
     
     
-
-
- 
+    
+    
+    
 }
 
 extension ShipDetailViewController: UITableViewDataSource,UITableViewDelegate {
     
-
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return careerArray.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = careerTableView.dequeueReusableCell(withIdentifier: "CareerTableViewCell", for: indexPath) as! CareerTableViewCell
         
@@ -138,12 +138,12 @@ extension ShipDetailViewController: UITableViewDataSource,UITableViewDelegate {
         cell.setup(year: yearAndEventArray[indexPath.row][0]+"年", event: str)
         
         cell.contentView.backgroundColor = UIColor.white
-
+        
         return cell
     }
     
-
-
+    
+    
     
 }
 

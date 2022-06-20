@@ -18,60 +18,60 @@ class SortedShipViewController: UIViewController {
     var shipType = String()
     var shipsArray = [DataSet]()
     var filteredShipsArray = [DataSet]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         collectionView.dataSource = self
         collectionView.delegate = self
-
+        
         collectionView.backgroundColor = .white
         collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         let nib = UINib(nibName: "AffiliatedShipCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "AffiliatedShipCollectionViewCell")
         let layout = CollectionViewFlowLayout!
-                layout.minimumInteritemSpacing = 8
+        layout.minimumInteritemSpacing = 8
         // Do any additional setup after loading the view.
     }
     
-
+    
     override func viewWillAppear(_ animated: Bool) {
         
         filteredShipsArray = shipsArray.filter{ data in
             return data.type == self.shipType}
-
-
+        
+        
     }
-
+    
 }
 
 extension SortedShipViewController:UICollectionViewDataSource {
     
-func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return filteredShipsArray.count
-}
-
-func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return filteredShipsArray.count
+    }
     
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AffiliatedShipCollectionViewCell", for: indexPath) as! AffiliatedShipCollectionViewCell
-    
-
-    cell.setup(image:filteredShipsArray[indexPath.row].shipImage1 , number: filteredShipsArray[indexPath.row].number, name: filteredShipsArray[indexPath.row].shipName)
- 
-    return cell
-}
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AffiliatedShipCollectionViewCell", for: indexPath) as! AffiliatedShipCollectionViewCell
+        
+        
+        cell.setup(image:filteredShipsArray[indexPath.row].shipImage1 , number: filteredShipsArray[indexPath.row].number, name: filteredShipsArray[indexPath.row].shipName)
+        
+        return cell
+    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        
         
         let shipDetailVC = self.storyboard?.instantiateViewController(identifier: "shipDetailVC") as! ShipDetailViewController
         
-                shipDetailVC.shipName = self.filteredShipsArray[indexPath.row].shipName
-                shipDetailVC.shipsArray = self.shipsArray
+        shipDetailVC.shipName = self.filteredShipsArray[indexPath.row].shipName
+        shipDetailVC.shipsArray = self.shipsArray
         
         navigationController?.pushViewController(shipDetailVC, animated: true)
     }
-
+    
 }
 
 
@@ -84,13 +84,13 @@ extension SortedShipViewController: UICollectionViewDelegateFlowLayout {
             withHorizontalFittingPriority: .required,
             verticalFittingPriority: .defaultLow)
     }
-
+    
     private var cellWidth: CGFloat {
         let availableWidth = collectionView.bounds.inset(by: collectionView.adjustedContentInset).width
         let interColumnSpace = CGFloat(8)
         let numColumns = CGFloat(3)
         let numInterColumnSpaces = numColumns - 1
-
+        
         return ((availableWidth - interColumnSpace * numInterColumnSpaces) / numColumns).rounded(.down)
     }
 }

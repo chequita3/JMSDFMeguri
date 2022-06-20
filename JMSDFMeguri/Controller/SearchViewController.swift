@@ -50,7 +50,7 @@ class SearchViewController: UIViewController,loadOKDelegate,UISearchBarDelegate 
         loadDBModel.loadOKDelegate = self
         tableView.delegate = self
         
-            }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -77,7 +77,7 @@ class SearchViewController: UIViewController,loadOKDelegate,UISearchBarDelegate 
             
             
         } else if check == 2 {
-           present(alertController, animated: true, completion: nil)
+            present(alertController, animated: true, completion: nil)
         }
     }
     

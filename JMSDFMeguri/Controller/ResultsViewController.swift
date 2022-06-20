@@ -6,9 +6,9 @@
 //
 
 import UIKit
- 
-class ResultsViewController: UITableViewController {
 
+class ResultsViewController: UITableViewController {
+    
     weak var searchViewController: SearchViewController?
     
     var dataList: [Ships] = [] {
@@ -18,11 +18,11 @@ class ResultsViewController: UITableViewController {
             }
         }
     }
- 
- 
+    
+    
     var loadDBModel = LoadDBModel()
- 
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,8 +30,8 @@ class ResultsViewController: UITableViewController {
         tableView.register(nib, forCellReuseIdentifier: "TableViewCell")
         
     }
- 
- 
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataList.count
     }
@@ -60,10 +60,10 @@ class ResultsViewController: UITableViewController {
         shipDetailVC.shipsArray = loadDBModel.dataSets
         
         self.searchViewController?.navigationController?.pushViewController(shipDetailVC, animated: true)
-
+        
     }
-
- 
- 
-
+    
+    
+    
+    
 }

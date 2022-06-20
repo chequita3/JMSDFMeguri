@@ -7,7 +7,9 @@
 
 import UIKit
 
-class SelectHPViewController: UIViewController {
+class SelectHPViewController: UIViewController,loadOKDelegate {
+    
+    
     
     @IBOutlet weak var ominatoButton: UIButton!
     @IBOutlet weak var yokosukaButton: UIButton!
@@ -17,20 +19,19 @@ class SelectHPViewController: UIViewController {
     
     var loadDBModel = LoadDBModel()
     var buttonSetting = ButtonSetting()
-    var shadowView1 = UIView()
-    var shadowView2 = UIView()
-    var shadowView3 = UIView()
-    var shadowView4 = UIView()
-    var shadowView5 = UIView()
-
-
-
+    
+    let alertController: UIAlertController = UIAlertController(title: "通信エラー", message: "電波状況の良いところで再度お試しください", preferredStyle: .alert)
+    let defaultAction: UIAlertAction = UIAlertAction(title: "Default", style: .default, handler: { (action:UIAlertAction) -> Void in
+        print("アラート表示")
+    })
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.addBackground(name: "背景（夕方）")
         loadDBModel.loadContents()
-
+        
         buttonSetting.settingButton(passedButton: ominatoButton)
         buttonSetting.settingButton(passedButton: yokosukaButton)
         buttonSetting.settingButton(passedButton: maizuruButton)
@@ -38,8 +39,14 @@ class SelectHPViewController: UIViewController {
         buttonSetting.settingButton(passedButton: saseboButton)
     }
     
-
-
+    func loadOK(check: Int) {
+        if check == 2 {
+            present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    
+    
     
     @IBAction func ominato(_ sender: Any) {
         let AffiliatedShipVC = self.storyboard?.instantiateViewController(identifier: "AffiliatedShipVC") as! AffiliatedShipViewController
@@ -87,5 +94,5 @@ class SelectHPViewController: UIViewController {
 
 
 
-        
+
 

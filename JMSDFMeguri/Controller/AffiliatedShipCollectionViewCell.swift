@@ -17,19 +17,20 @@ class AffiliatedShipCollectionViewCell: UICollectionViewCell {
     
     var loadDBModel = LoadDBModel()
     
+    let alertController: UIAlertController = UIAlertController(title: "通信エラー", message: "電波状況の良いところで再度お試しください", preferredStyle: .alert)
+    let defaultAction: UIAlertAction = UIAlertAction(title: "Default", style: .default, handler: { (action:UIAlertAction) -> Void in
+        print("アラート表示")
+    })
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-//        contentView.translatesAutoresizingMaskIntoConstraints = false
-//        contentView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-//        contentView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-//        contentView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-//        contentView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+
     }
     
     func setup(image: String, number: Int, name: String) {
         
+
         
         loadDBModel.createDownloadURL(passString: image, completion: { [self] in
             self.shipImageView.sd_setImage(with: loadDBModel.downloadURL, completed: nil)

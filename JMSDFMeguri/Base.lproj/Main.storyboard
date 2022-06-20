@@ -90,10 +90,21 @@
                                             <constraint firstAttribute="trailing" secondItem="OdN-Ix-T6K" secondAttribute="trailing" constant="20" id="rdV-p3-vU0"/>
                                         </constraints>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLK-3o-LwP">
+                                        <rect key="frame" x="109" y="710" width="197" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="プライバシーポリシー"/>
+                                        <connections>
+                                            <action selector="privacyPolicy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pvx-zZ-fSQ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="zLK-3o-LwP" firstAttribute="top" secondItem="r4I-Mp-zZj" secondAttribute="bottom" constant="45" id="AWK-0U-jfS"/>
+                                    <constraint firstItem="6fW-4h-w1x" firstAttribute="trailing" secondItem="zLK-3o-LwP" secondAttribute="trailing" constant="108" id="E4t-a2-8bf"/>
                                     <constraint firstAttribute="trailing" secondItem="r4I-Mp-zZj" secondAttribute="trailing" id="EE1-HX-aVN"/>
                                     <constraint firstItem="r4I-Mp-zZj" firstAttribute="top" secondItem="bib-st-cQw" secondAttribute="top" id="OrY-6M-kDF"/>
+                                    <constraint firstItem="zLK-3o-LwP" firstAttribute="leading" secondItem="6fW-4h-w1x" secondAttribute="leading" constant="109" id="VdJ-xA-eu3"/>
                                     <constraint firstAttribute="bottom" secondItem="r4I-Mp-zZj" secondAttribute="bottom" id="Ytw-Ul-88s"/>
                                     <constraint firstItem="r4I-Mp-zZj" firstAttribute="width" secondItem="bib-st-cQw" secondAttribute="width" id="ioh-Ac-Par"/>
                                     <constraint firstItem="r4I-Mp-zZj" firstAttribute="leading" secondItem="bib-st-cQw" secondAttribute="leading" id="voh-sr-hNb"/>

@@ -45,6 +45,7 @@
 		326BB66F4F7E591809651300 /* Pods-JMSDFMeguri.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMSDFMeguri.debug.xcconfig"; path = "Target Support Files/Pods-JMSDFMeguri/Pods-JMSDFMeguri.debug.xcconfig"; sourceTree = "<group>"; };
 		981879E728086560002C3C2C /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		981DB9912848D119003CACB0 /* ButtonSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSetting.swift; sourceTree = "<group>"; };
+		9828D9BF285DC8DF007B5918 /* JMSDFMeguri.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JMSDFMeguri.entitlements; sourceTree = "<group>"; };
 		982C6B61284E552B004F283E /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = /Users/takayamakosuke/Desktop/JMSDFMeguri/JMSDFMeguri/Model/StringExtension.swift; sourceTree = "<absolute>"; };
 		982C6B63284E61B3004F283E /* CareerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerTableViewCell.swift; sourceTree = "<group>"; };
 		982C6B64284E61B3004F283E /* CareerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CareerTableViewCell.xib; sourceTree = "<group>"; };
@@ -130,6 +131,7 @@
 		987BDDB727F12277004015ED /* JMSDFMeguri */ = {
 			isa = PBXGroup;
 			children = (
+				9828D9BF285DC8DF007B5918 /* JMSDFMeguri.entitlements */,
 				987BDDB827F12277004015ED /* AppDelegate.swift */,
 				987BDDBA27F12277004015ED /* SceneDelegate.swift */,
 				988EE83327FCFB3C00F8E2D1 /* Model */,
@@ -472,16 +474,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = JMSDFMeguri/JMSDFMeguri.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.01;
 				DEVELOPMENT_TEAM = P4895C3T94;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JMSDFMeguri/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "海自めぐり";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -491,7 +496,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -501,16 +506,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = JMSDFMeguri/JMSDFMeguri.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.01;
 				DEVELOPMENT_TEAM = P4895C3T94;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JMSDFMeguri/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "海自めぐり";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -520,7 +528,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

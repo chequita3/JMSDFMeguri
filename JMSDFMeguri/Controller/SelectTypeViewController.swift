@@ -9,7 +9,9 @@ import UIKit
 import FirebaseStorage
 import SDWebImage
 
-class SelectTypeViewController: UIViewController {
+class SelectTypeViewController: UIViewController,loadOKDelegate {
+    
+    
     
     @IBOutlet weak var DDGButton: UIButton!
     @IBOutlet weak var DDButton: UIButton!
@@ -18,6 +20,11 @@ class SelectTypeViewController: UIViewController {
     
     var loadDBModel = LoadDBModel()
     var buttonSetting = ButtonSetting()
+    
+    let alertController: UIAlertController = UIAlertController(title: "通信エラー", message: "電波状況の良いところで再度お試しください", preferredStyle: .alert)
+    let defaultAction: UIAlertAction = UIAlertAction(title: "Default", style: .default, handler: { (action:UIAlertAction) -> Void in
+        print("アラート表示")
+    })
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +39,15 @@ class SelectTypeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-
-
+    func loadOK(check: Int) {
+        if check == 2 {
+            present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    
+    
+    
     
     
     @IBAction func ButtonForDDG(_ sender: Any) {
@@ -75,13 +88,13 @@ class SelectTypeViewController: UIViewController {
     
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
